@@ -1,0 +1,29 @@
+<picker bindchange="getChange" range="{{range}}" value="{{value}}">
+    <view class="header">{{range[value]}} 学期</view>
+</picker>
+<view class="all">
+    <view class="all-list">
+        <text class="all-list__score">{{gradeTerms[value].subjectNum}}</text>
+        <text class="all-list__name">总课程数</text>
+    </view>
+    <view class="all-list">
+        <text class="all-list__score">{{gradeTerms[value].averageGrade}}</text>
+        <text class="all-list__name">平均绩点</text>
+    </view>
+    <view class="all-list">
+        <text class="all-list__score">{{gradeTerms[value].totalScore}}</text>
+        <text class="all-list__name">总学分</text>
+    </view>
+</view>
+<view class="{{rank?'ranked':'ranking'}}">
+{{rank}}</view>
+<view class="course" wx:for="{{score}}">
+    <view class="course-title">{{item.subjectName}}</view>
+    <view class="course-list">
+        <text>类型：{{item.subjectCategory}}</text>
+        <text>课程编号：{{item.subjectCode}}</text>
+        <text>成绩：{{item.finalScore}} 分</text>
+        <text>绩点：{{item.gpa}}</text>
+        <text>学分：{{item.subjectScore}}</text>
+    </view>
+</view>

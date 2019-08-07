@@ -1,0 +1,228 @@
+page {
+    --primary: #ffe411;
+    --yellow: #fcf562;
+    --purple: #D7A4DD;
+    --blue: #037ef3;
+    --cyan: #A6DFE8;
+    --green: #00a98f;
+    background: #f2f2f2;
+    font-size: 28rpx;
+    color: #313133;
+    font-family: Helvetica Neue,Helvetica,sans-serif;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    line-height: normal;
+    border-radius: 0;
+}
+
+button::after {
+    border: none;
+}
+
+.custom {
+    position: relative;
+    z-index: 999;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: var(--primary);
+}
+
+.custom-back {
+    position: relative;
+    border-top: 3vw solid transparent;
+    border-bottom: 3vw solid transparent;
+    border-right: 3.5vw solid #333;
+    margin: 0 35vw 0 4vw;
+    border-radius: 3vw;
+}
+
+.custom-back::after {
+    content: '';
+    position: absolute;
+    z-index: 10;
+    left: 1vw;
+    top: -3vw;
+    border-top: 3vw solid transparent;
+    border-bottom: 3vw solid transparent;
+    border-right: 3.5vw solid var(--primary);
+}
+
+.custom-name {
+    position: relative;
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+.custom-name::after {
+    content: '';
+    position: absolute;
+    right: -4vw;
+    top: 1vw;
+    border-top: 2vw solid transparent;
+    border-bottom: 2vw solid transparent;
+    border-left: 2vw solid #000;
+    border-radius: 2vw;
+}
+
+.tmodal {
+    width: 70vw;
+}
+
+.tmodal-title {
+    line-height: 10vw;
+    font-size: 5vw;
+    text-align: center;
+    border-bottom: .7vw solid #000;
+    background-color: #fff;
+}
+
+.tmodal-content {
+    padding: 5vw;
+    font-size: 4vw;
+    background: #fff;
+}
+
+view,text,scroll-view,swiper,button,form,input,textarea,label,navigator,image {
+    box-sizing: border-box;
+}
+
+.cu-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1110;
+    opacity: 0;
+    outline: 0;
+    text-align: center;
+    transform: scale(1.185);
+    backface-visibility: hidden;
+    perspective: 2000rpx;
+    background: rgba(0,0,0,0.6);
+    transition: all 0.3s ease-in-out 0s;
+    pointer-events: none;
+}
+
+.cu-modal::before {
+    content: "\200B";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.cu-modal.show {
+    opacity: 1;
+    transition-duration: 0.3s;
+    transform: scale(1);
+    overflow-x: hidden;
+    overflow-y: auto;
+    pointer-events: auto;
+}
+
+.cu-dialog {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85vw;
+    max-width: 100%;
+    background: #f8f8f8;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+
+.cu-modal.bottom-modal::before {
+    vertical-align: bottom;
+}
+
+.cu-modal.bottom-modal .cu-dialog {
+    width: 100%;
+    border-radius: 0;
+}
+
+.cu-modal.bottom-modal {
+    margin-bottom: -1000rpx;
+}
+
+.cu-modal.bottom-modal.show {
+    margin-bottom: 0;
+}
+
+.cu-modal.drawer-modal {
+    transform: scale(1);
+    display: flex;
+}
+
+.cu-modal.drawer-modal .cu-dialog {
+    height: 100%;
+    min-width: 200rpx;
+    border-radius: 0;
+    margin: initial;
+    transition-duration: 0.3s;
+}
+
+.cu-modal.drawer-modal.justify-start .cu-dialog {
+    transform: translateX(-100%);
+}
+
+.cu-modal.drawer-modal.justify-end .cu-dialog {
+    transform: translateX(100%);
+}
+
+.cu-modal.drawer-modal.show .cu-dialog {
+    transform: translateX(0%);
+}
+
+.shine-hover {
+    opacity: .8;
+    transition: transform 0.45s ease-in-out;
+    transition: transform 0.45s ease-in-out,-webkit-transform 0.45s ease-in-out;
+    transform: translateX(200%) rotate(35deg);
+}
+
+.jelly-hover {
+    animation: jelly 0.5s;
+}
+
+@-webkit-keyframes jelly {
+    0%,100% {
+        transform: scale(1,1);
+    }
+
+    25% {
+        transform: scale(0.9,1.1);
+    }
+
+    50% {
+        transform: scale(1.1,0.9);
+    }
+
+    75% {
+        transform: scale(0.95,1.05);
+    }
+}
+
+@keyframes jelly {
+    0%,100% {
+        transform: scale(1,1);
+    }
+
+    25% {
+        transform: scale(0.9,1.1);
+    }
+
+    50% {
+        transform: scale(1.1,0.9);
+    }
+
+    75% {
+        transform: scale(0.95,1.05);
+    }
+}

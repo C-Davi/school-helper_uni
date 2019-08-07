@@ -1,0 +1,6 @@
+<view class="header">NEWS</view>
+<view bindtap="goDetailPage" class="news" data-index="{{index}}" wx:for="{{news}}">
+    <image class="news-img" mode="aspectFill" src="{{item.imgMap[0].imgUrl}}"></image>
+    <text class="news-name">{{item.newsName}}</text>
+    <text class="news-times">{{item.newsTime}}</text>
+</view>

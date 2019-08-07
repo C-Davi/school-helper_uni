@@ -1,0 +1,17 @@
+<view class="login">
+    <image class="login-logo" src="https://612d-a-e8726c-1258823957.tcb.qcloud.la/login_banner.png"></image>
+    <view class="login-input">
+        <input bindinput="getUsername" class="login-input__username" placeholder="请输入学号" value="{{username}}"></input>
+        <input bindconfirm="goIndexPage" bindinput="getPassword" class="login-input__password" placeholder="请输入密码" value="{{password}}"></input>
+    </view>
+    <button bindtap="goIndexPage" class="login-btn" hoverClass="jelly-hover">查询</button>
+    <view class="login-tips">
+    ❗您输入的账号密码仅用于进行成绩查询，ZZUhelper保证不会收集用户隐私信息，请放心使用嗷
+  </view>
+</view>
+<view bindtap="hideModal" class="cu-modal {{showModal?'show':''}}">
+    <view catchtap class="cu-dialog tmodal">
+        <view class="tmodal-title" style="background: #ea4535;">提示</view>
+        <view class="tmodal-content">信息验证未通过❌</view>
+    </view>
+</view>

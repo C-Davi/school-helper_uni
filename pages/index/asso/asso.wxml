@@ -1,0 +1,6 @@
+<view class="asso">
+    <navigator class="asso-list" url="index/index?id={{item.id}}" wx:for="{{asso}}">
+        <image class="asso-list__logo" src="{{item.logo}}"></image>
+        <text class="asso-list__name">{{item.name}}</text>
+    </navigator>
+</view>

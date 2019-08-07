@@ -1,0 +1,193 @@
+page {
+    background: #fff;
+    color: #333;
+}
+
+.header {
+    position: relative;
+    z-index: 1;
+    width: 100vw;
+    height: 44vw;
+    background: var(--yellow);
+    clip-path: polygon(0% 0%,0% 95%,5% 98%,10% 100%,15% 98%,20% 95%,25% 98%,30% 100%,35% 98%,40% 95%,45% 98%,50% 100%,55% 98%,60% 95%,65% 98%,70% 100%,75% 98%,80% 95%,85% 97%,90% 100%,95% 98%,100% 95%,100% 0%);
+}
+
+@-webkit-keyframes change-wave {
+    0%,20%,40%,60%,80%,100% {
+        clip-path: polygon(0% 0%,0% 100%,5% 97%,10% 95%,15% 97%,20% 100%,25% 97%,30% 95%,35% 97%,40% 100%,45% 97%,50% 95%,55% 97%,60% 100%,65% 97%,70% 95%,75% 97%,80% 100%,85% 97%,90% 95%,95% 97%,100% 100%,100% 0%);
+    }
+
+    10%,30%,50%,70%,90% {
+        clip-path: polygon(0% 0%,0% 95%,5% 98%,10% 100%,15% 98%,20% 95%,25% 98%,30% 100%,35% 98%,40% 95%,45% 98%,50% 100%,55% 98%,60% 95%,65% 98%,70% 100%,75% 98%,80% 95%,85% 97%,90% 100%,95% 98%,100% 95%,100% 0%);
+    }
+}
+
+@keyframes change-wave {
+    0%,20%,40%,60%,80%,100% {
+        clip-path: polygon(0% 0%,0% 100%,5% 97%,10% 95%,15% 97%,20% 100%,25% 97%,30% 95%,35% 97%,40% 100%,45% 97%,50% 95%,55% 97%,60% 100%,65% 97%,70% 95%,75% 97%,80% 100%,85% 97%,90% 95%,95% 97%,100% 100%,100% 0%);
+    }
+
+    10%,30%,50%,70%,90% {
+        clip-path: polygon(0% 0%,0% 95%,5% 98%,10% 100%,15% 98%,20% 95%,25% 98%,30% 100%,35% 98%,40% 95%,45% 98%,50% 100%,55% 98%,60% 95%,65% 98%,70% 100%,75% 98%,80% 95%,85% 97%,90% 100%,95% 98%,100% 95%,100% 0%);
+    }
+}
+
+.header-banner {
+    margin: 5vw;
+    width: 90vw;
+    height: 30vw;
+    border-radius: 2vw;
+    box-shadow: 0vw 0vw 2vw gainsboro;
+}
+
+.title {
+    width: 100vw;
+    line-height: 7vw;
+    font-size: 5.5vw;
+    font-weight: bold;
+    padding-left: 3vw;
+    margin-top: 3vw;
+    text-shadow: 2vw 2vw 3vw var(--primary);
+}
+
+.main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    align-content: center;
+}
+
+.main-list {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 20vw;
+    height: 20vw;
+    margin: 5vw 0 0 4vw;
+    background-color: var(--primary);
+    border-radius: 2vw;
+    box-shadow: 0 2.5vw 1vw -1vw gainsboro;
+    transition: all .1s linear;
+}
+
+.no-use.main-list {
+    box-shadow: 0 0 0 #fff0;
+    background-color: var(--purple);
+}
+
+.main-list--hover {
+    box-shadow: 0 0 0 #fff0;
+}
+
+.main-list__icon {
+    position: relative;
+    width: 10vw;
+    height: 10vw;
+    font-size: 8vw;
+    text-align: left;
+    font-weight: bold;
+    text-shadow: .7vw .7vw 0 var(--cyan);
+    color: #fff;
+}
+
+.main-list__icon::after {
+    content: attr(data-name);
+    position: absolute;
+    right: -1vw;
+    bottom: -1.5vw;
+    font-size: 4vw;
+}
+
+.main-list__name {
+    font-size: 3.5vw;
+}
+
+.modal {
+    width: 210rpx;
+    height: 210rpx;
+    border-radius: 10%;
+}
+
+.bottom {
+    height: 10vw;
+}
+
+.face {
+    display: flex;
+    padding: 4px;
+    width: 210rpx;
+    height: 210rpx;
+    object-fit: contain;
+    border-radius: 10%;
+    box-shadow: inset 0 5px white,inset 0 -5px #bbb,inset 5px 0 #d7d7d7,inset -5px 0 #d7d7d7;
+}
+
+.pip {
+    display: block;
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    margin: 8rpx;
+    background-color: #333;
+    box-shadow: inset 0 3px #111,inset 0 -3px #555;
+}
+
+.first {
+    justify-content: center;
+    align-items: center;
+}
+
+.second {
+    justify-content: space-between;
+}
+
+.second .pip:last-child {
+    align-self: flex-end;
+}
+
+.third {
+    justify-content: space-between;
+}
+
+.third .pip.third-item-center {
+    align-self: center;
+}
+
+.third .pip:last-child {
+    align-self: flex-end;
+}
+
+.fourth {
+    justify-content: space-between;
+}
+
+.fourth .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fifth {
+    justify-content: space-between;
+}
+
+.fifth .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fifth .column.fifth-column-center {
+    justify-content: center;
+}
+
+.sixth {
+    justify-content: space-between;
+}
+
+.sixth .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

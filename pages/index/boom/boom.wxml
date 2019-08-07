@@ -1,0 +1,61 @@
+<view class="box">
+    <view bindtap="setGame" class="set-game" hoverClass="is-set-game">{{isWin}}</view>
+    <view class="box-list" wx:for="{{mineMap}}" wx:for-index="rowIndex" wx:for-item="row">
+        <button bindlongpress="flag" catchtap="demining" class="box-list__item bg-{{col}} {{col<9?col<0?'':'bg-white':'bg-white'}}" data-value="{{col}}" data-x="{{rowIndex}}" data-y="{{colIndex}}" wx:for="{{row}}" wx:for-index="colIndex" wx:for-item="col">
+      {{col<9?col<0?'':col==0?'🐣':col:col>9?'🚩':'💥'}}
+    </button>
+    </view>
+    <view class="footer">
+        <view class="footer-list">
+            <text>{{step}}
+</text>
+            <text class=" text-grey footer-list__name">MOVES</text>
+        </view>
+        <button bindtap="getRanking" class="footer-list" wx:if="{{isAuth}}">
+            <image class="footer-list__icon" src="/images/icon-s/bolt.svg"></image>
+            <text class="footer-list__name">RANK</text>
+        </button>
+        <button bindgetuserinfo="getUserInfo" class="footer-list" openType="getUserInfo" wx:else>
+            <image class="footer-list__icon" src="/images/icon-s/bolt.svg"></image>
+            <text class="footer-list__name">RANK</text>
+        </button>
+        <view class="footer-list">
+            <text>{{timesGo}}
+</text>
+            <text class="text-grey footer-list__name">TIME</text>
+        </view>
+    </view>
+</view>
+<view class="tips">
+    <text>-点击上方表情重置,长摁标记</text>
+</view>
+<view class="cu-modal {{dialogModal?'show':''}}" wx:if="{{!isAuth}}">
+    <view class="cu-dialog bg-gray">
+        <view class="padding-xl">
+            <text>
+      是否参与到排名
+注：需获取个人信息 </text>
+            <text class="icon-upstagefill text-yellow"></text>
+        </view>
+        <button bindtap="hideDialogModal" class="cu-btn line-black">取消</button>
+        <button bindgetuserinfo="getUserInfoAndData" bindtap="hideDialogModal" class="cu-btn bg-cyan margin" openType="getUserInfo">确定</button>
+    </view>
+</view>
+<view bindtap="hideRank" class="cu-modal {{showRank?'show':''}}" wx:if="{{isAuth}}">
+    <view catchtap class="cu-dialog bg-gray rank">
+        <text bindtap="hideRank" class="icon-close text-cyan rank-close"></text>
+        <view class="rank-header">
+            <view class="rank-header__title">TOP TEN</view>
+            <image class="my-avatar" src="{{myRank.avatarUrl}}"></image>
+            <text class="my-rank">TIME:
+{{myRank.time}} s</text>
+        </view>
+        <view class="rank-list" wx:for="{{rank}}">
+            <view class="rank-list__rank">{{index+1}}</view>
+            <image class="rank-list__avatar" src="{{item.avatarUrl}}"></image>
+            <view class="rank-list__nickName">{{item.nickName}}</view>
+            <text class="rank-list__time{{index}}">{{item.time}}</text>
+        </view>
+        <view class="white-space"></view>
+    </view>
+</view>

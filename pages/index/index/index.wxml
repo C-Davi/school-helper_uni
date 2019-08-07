@@ -1,0 +1,6 @@
+<view class="loading">
+    <view class="loading-logo">
+        <view class="loading-logo__main"></view>
+        <view class="loading-logo__soft"></view>
+    </view>
+</view>

@@ -1,0 +1,159 @@
+page {
+    overflow: hidden;
+}
+
+.tab {
+    display: flex;
+    width: 100vw;
+    height: 10vw;
+    background-color: #fff;
+    color: #333;
+}
+
+.tab-list {
+    line-height: 10vw;
+    width: 15vw;
+    text-align: center;
+}
+
+.active {
+    color: #000;
+    font-weight: bold;
+}
+
+.region {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: center;
+    width: 100vw;
+    height: 70vw;
+    background-color: #fff;
+}
+
+.region-list {
+    position: relative;
+    margin-left: 5vw;
+    width: 90vw;
+    height: 20vw;
+    border-bottom: 4rpx solid gainsboro;
+}
+
+.region-list__pic {
+    position: absolute;
+    top: 4vw;
+    width: 18vw;
+    height: 12vw;
+}
+
+.region-list__name {
+    position: absolute;
+    left: 25vw;
+    line-height: 20vw;
+    font-size: 4vw;
+}
+
+.region-list__icon {
+    position: absolute;
+    right: 0;
+    top: 6vw;
+    width: 8vw;
+    height: 8vw;
+}
+
+.detail {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 70vw;
+    background-color: #f2f2f2;
+}
+
+.show-detail {
+    animation: show 0.5s ease-in both;
+}
+
+@-webkit-keyframes show {
+    0% {
+        transform: translateY(65vw);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes show {
+    0% {
+        transform: translateY(65vw);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+.hide-detail {
+    animation: hide 0.5s ease-out both;
+}
+
+@-webkit-keyframes hide {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translateY(65vw);
+    }
+}
+
+@keyframes hide {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translateY(65vw);
+    }
+}
+
+.detail-arrow {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 45vw;
+    width: 12vw;
+    text-align: center;
+    line-height: 4vw;
+    border: .7vw solid #000;
+    font-size: 5vw;
+    border-top: none;
+    background-color: var(--primary);
+}
+
+.detail-header {
+    border-top: .7vw solid var(--primary);
+    position: relative;
+    height: 20vw;
+    width: 100vw;
+    background-color: #fff;
+}
+
+.detail-header__name {
+    position: absolute;
+    left: 5vw;
+    line-height: 20vw;
+    font-size: 6vw;
+}
+
+.detail-header__icon {
+    position: absolute;
+    right: 5vw;
+    top: 6vw;
+    width: 8vw;
+    height: 8vw;
+}
+
+.detail-content {
+    padding: 5vw;
+}

@@ -1,0 +1,12 @@
+<view class="title">联系方式</view>
+<view class="phone" wx:for="{{phones}}" wx:key="">
+    <view class="phone-name">
+        <text>部门</text>
+        <text>{{item.name}}</text>
+    </view>
+    <view bindtap="callPhone" class="phone-value" data-phone="{{item.phone}}">
+        <text>联系方式</text>
+        <text>{{item.phone}}</text>
+    </view>
+</view>
+<view class="note">点击号码可以直接拨号</view>

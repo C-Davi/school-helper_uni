@@ -1,0 +1,122 @@
+<template name="sixth">
+    <view class="sixth face">
+        <view class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </view>
+        <view class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </view>
+    </view>
+</template>
+<template name="fifth">
+    <view class="fifth face">
+        <view class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </view>
+        <view class="column fifth-column-center">
+            <span class="pip"></span>
+        </view>
+        <view class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </view>
+    </view>
+</template>
+<template name="fourth">
+    <view class="fourth face">
+        <view class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </view>
+        <view class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </view>
+    </view>
+</template>
+<template name="third">
+    <view class="third face">
+        <span class="pip"></span>
+        <span class="pip third-item-center"></span>
+        <span class="pip"></span>
+    </view>
+</template>
+<template name="second">
+    <view class="second face">
+        <span class="pip"></span>
+        <span class="pip"></span>
+    </view>
+</template>
+<template name="first">
+    <view class="first face">
+        <span class="pip"></span>
+    </view>
+</template>
+<swiper autoplay circular class="header" interval="3000">
+    <swiper-item wx:for="{{banner}}" wx:key="">
+        <navigator hoverClass="none" url="{{item.url}}">
+            <image class="header-banner" mode="aspectFill" src="{{item.img}}"></image>
+        </navigator>
+    </swiper-item>
+</swiper>
+<view class="title">Study</view>
+<view class="main">
+    <view bindtap="goScorePage" class="main-list" hoverClass="main-list--hover">
+        <image class="main-list__icon" src="/images/icon/search.svg"></image>
+        <text class="main-list__name">查成绩</text>
+    </view>
+    <view class="main-list" hoverClass="main-list--hover">
+        <text class="main-list__icon" data-name="R">32</text>
+        <text class="main-list__name">空教室</text>
+    </view>
+</view>
+<view class="title">Life</view>
+<view class="main">
+    <view bindtap="goMapPage" class="main-list" hoverClass="main-list--hover">
+        <text class="main-list__icon" data-name="℃">{{temp}}</text>
+        <text class="main-list__name">校园导览</text>
+    </view>
+    <view bindtap="showBusTime" class="main-list" hoverClass="main-list--hover">
+        <image class="main-list__icon" src="/images/icon/bus.svg"></image>
+        <text class="main-list__name">校车车</text>
+    </view>
+    <view bindtap="showCalendar" class="main-list" hoverClass="main-list--hover">
+        <image class="main-list__icon" src="/images/icon/calendar.svg"></image>
+        <text class="main-list__name">校历历</text>
+    </view>
+    <view bindtap="goAssoPage" class="main-list" hoverClass="main-list--hover">
+        <image class="main-list__icon" src="/images/icon/asso.svg"></image>
+        <text class="main-list__name">学校社团</text>
+    </view>
+    <view bindtap="goPhonePage" class="main-list" hoverClass="main-list--hover">
+        <image class="main-list__icon" src="/images/icon/phone.svg"></image>
+        <text class="main-list__name">通讯录</text>
+    </view>
+</view>
+<view class="title">Leisure</view>
+<view class="main">
+    <view bindtap="goBoomPage" class="main-list" hoverClass="main-list--hover">
+        <image class="main-list__icon" src="/images/icon/boom.svg"></image>
+        <text class="main-list__name">扫雷boom</text>
+    </view>
+    <view bindtap="showRockModal" class="main-list" hoverClass="main-list--hover">
+        <image class="main-list__icon" src="/images/icon/dice.svg"></image>
+        <text class="main-list__name">摇一摇</text>
+    </view>
+    <view bindtap="goFlowerPage" class="main-list" hoverClass="main-list--hover">
+        <image class="main-list__icon" src="/images/icon/plant.svg"></image>
+        <text class="main-list__name">植物识别</text>
+    </view>
+</view>
+<view class="bottom"></view>
+<view bindtap="hideRockModal" class="cu-modal {{showRock?'show':''}}">
+    <view catchtap class="cu-dialog modal">
+        <template is="{{dice[num]}}" data></template>
+    </view>
+</view>
+<view class="white-space"></view>

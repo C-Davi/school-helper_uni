@@ -1,0 +1,10 @@
+<view class="nav">
+    <view bindtap="getActiveNav" class="{{isActive===index?'nav-active':''}} nav-list" data-index="{{index}}" wx:for="{{nav}}">{{item}}</view>
+</view>
+<view class="main">
+    <view bindtap="goDetailPage" class="news" data-index="{{index}}" wx:for="{{news}}">
+        <image class="news-img" mode="aspectFill" src="{{item.imgMap[0].imgUrl}}"></image>
+        <text class="news-name">{{item.newsName}}</text>
+        <text class="news-times">{{item.newsTime}}</text>
+    </view>
+</view>

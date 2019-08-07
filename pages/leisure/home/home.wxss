@@ -1,0 +1,84 @@
+.nav {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: start;
+    align-items: center;
+    width: 100vw;
+    height: 12vw;
+    background-color: #fff;
+    box-shadow: 3vw 0 3vw -1vw gainsboro;
+}
+
+.nav-list {
+    position: relative;
+    width: 15vw;
+    margin-left: 5vw;
+    line-height: 8vw;
+    text-align: center;
+}
+
+.nav-list::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0;
+    height: 9vw;
+    border-bottom: 1vw solid var(--cyan);
+    border-radius: .5vw;
+    transition: 0.2s all cubic-bezier(1,0,0,1);
+}
+
+.nav-active.nav-list::after {
+    content: '';
+    left: 0;
+    width: 15vw;
+}
+
+.nav-active~.nav-list::after {
+    left: 0;
+}
+
+.main {
+    margin-top: 15vw;
+}
+
+.news {
+    position: relative;
+    width: 95vw;
+    height: 30vw;
+    margin-left: 2vw;
+    box-shadow: 1.5vw 0 2vw -1vw var(--blue);
+    margin-bottom: 2vw;
+    background-color: #fff;
+    border-radius: 1vw;
+}
+
+.news-img {
+    position: absolute;
+    left: 3vw;
+    top: 5vw;
+    width: 28vw;
+    height: 20vw;
+    background-color: #ffe411;
+}
+
+.news-name {
+    position: absolute;
+    width: 60vw;
+    overflow: hidden;
+    left: 34vw;
+    top: 5vw;
+    font-size: 3.7vw;
+}
+
+.news-times {
+    position: absolute;
+    right: 5vw;
+    bottom: 3vw;
+    font-size: 3.5vw;
+    color: gray;
+}

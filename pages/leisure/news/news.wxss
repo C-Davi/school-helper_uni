@@ -1,0 +1,46 @@
+.header {
+    position: relative;
+    line-height: 15vw;
+    font-size: 8vw;
+    color: gray;
+    margin-left: 5vw;
+    font-weight: bold;
+    text-shadow: 2vw 2vw 4vw #ffe411;
+}
+
+.news {
+    position: relative;
+    width: 95vw;
+    height: 30vw;
+    margin-left: 2vw;
+    box-shadow: 1.5vw 0 2vw -1vw var(--blue);
+    margin-bottom: 2vw;
+    background-color: #fff;
+    border-radius: 1vw;
+}
+
+.news-img {
+    position: absolute;
+    left: 3vw;
+    top: 5vw;
+    width: 28vw;
+    height: 20vw;
+    background-color: #ffe411;
+}
+
+.news-name {
+    position: absolute;
+    width: 60vw;
+    overflow: hidden;
+    left: 34vw;
+    top: 5vw;
+    font-size: 3.7vw;
+}
+
+.news-times {
+    position: absolute;
+    right: 5vw;
+    bottom: 3vw;
+    font-size: 3.5vw;
+    color: gray;
+}

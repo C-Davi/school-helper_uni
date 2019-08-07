@@ -1,0 +1,112 @@
+.header {
+    position: relative;
+    margin: 5vw auto 0;
+    height: 30vw;
+    width: 90vw;
+    background-color: var(--primary);
+    border-radius: 2vw;
+    box-shadow: 2vw 0 2vw -1vw var(--cyan);
+}
+
+.header-avatar {
+    position: absolute;
+    top: 5vw;
+    left: 5vw;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+}
+
+.header-avatar::after {
+    content: '';
+    position: absolute;
+    top: -4.9vw;
+    left: -4.95vw;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    border: 5vw solid var(--primary);
+    background-color: transparent;
+}
+
+.header-name {
+    position: absolute;
+    top: 7vw;
+    left: 30vw;
+    font-weight: bold;
+}
+
+.main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main-list {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: start;
+    border-radius: 2vw;
+    margin-top: 5vw;
+    overflow: hidden;
+    box-shadow: 0 2vw 2vw -1vw gainsboro;
+}
+
+.main-list>button {
+    border-bottom: .7vw solid #f2f2f2;
+}
+
+.main-list>button:last-child {
+    border-bottom: none;
+}
+
+.main-list__item {
+    position: relative;
+    height: 15vw;
+    width: 90vw;
+    background-color: #fff;
+}
+
+.main-list__item>image {
+    position: absolute;
+    left: 5vw;
+    top: 5vw;
+    width: 5vw;
+    height: 5vw;
+}
+
+.main-list__item>text {
+    position: absolute;
+    left: 15vw;
+    line-height: 15vw;
+    font-size: 4vw;
+    color: #333;
+}
+
+.main-desc {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 90vw;
+    padding: 5vw;
+    margin: 5vw 0;
+    border-radius: 2vw;
+    box-shadow: 0 2vw 2vw -1vw gainsboro;
+    background-color: #fff;
+}
+
+.main-desc__logo {
+    width: 12vw;
+    height: 12vw;
+}
+
+.main-desc>text {
+    font-size: 3.5vw;
+    color: #666;
+    line-height: 5vw;
+}
+
+.appid {
+    color: var(--blue);
+}

@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'webfont';
+    font-display: swap;
+    src: url('//at.alicdn.com/t/webfont_t6tgmowqyi.eot');
+    src: url('//at.alicdn.com/t/webfont_t6tgmowqyi.eot?#iefix') format('embedded-opentype'),url('//at.alicdn.com/t/webfont_t6tgmowqyi.woff2') format('woff2'),url('//at.alicdn.com/t/webfont_t6tgmowqyi.woff') format('woff'),url('//at.alicdn.com/t/webfont_t6tgmowqyi.ttf') format('truetype'),url('//at.alicdn.com/t/webfont_t6tgmowqyi.svg#AlibabaPuHuiTiM') format('svg');
+}
+
+.title {
+    line-height: 10vw;
+    margin-left: 5vw;
+    font-size: 4vw;
+    font-weight: bold;
+    text-shadow: 2vw 2vw 3vw var(--primary);
+}
+
+.phone {
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90vw;
+    margin: 3vw 5vw;
+    background-color: #fff;
+    border-radius: 1.5vw;
+    box-shadow: 1vw 1vw 5vw rgb(240,238,238);
+}
+
+.phone-name,.phone-value {
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2vw;
+}
+
+.phone-name>text:first-child,.phone-value>text:first-child {
+    width: 20vw;
+}
+
+.phone-name>text:last-child,.phone-value>text:last-child {
+    width: 50vw;
+    font-family: 'webfont';
+}
+
+.note {
+    position: absolute;
+    right: 5vw;
+    top: 2vw;
+    font-size: 3vw;
+    margin-left: 5vw;
+    color: gray;
+    line-height: 10vw;
+}

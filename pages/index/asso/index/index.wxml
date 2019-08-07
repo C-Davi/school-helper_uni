@@ -1,0 +1,7 @@
+<view class="header">
+    <image class="header-logo" src="{{data.logo}}"></image>
+    <text class="header-name">{{data.name}}</text>
+</view>
+<view class="main">
+    <text class="main-desc">{{data.desc}}</text>
+</view>

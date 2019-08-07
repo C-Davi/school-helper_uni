@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index/index",
+    "pages/index/home/home",
+    "pages/leisure/home/home",
+    "pages/about/home/home",
+    "pages/index/score/score",
+    "pages/index/score/index/index",
+    "pages/index/map/map",
+    "pages/index/boom/boom",
+    "pages/index/flower/flower",
+    "pages/index/asso/asso",
+    "pages/index/asso/index/index",
+    "pages/index/map/index/index",
+    "pages/index/phone/phone"
+  ],
+  "window": {
+    "navigationBarTitleText": "嗨尔社联助手",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#ffe411"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#11a3ff",
+    "list": [
+      {
+        "pagePath": "pages/index/home/home",
+        "text": "首页",
+        "iconPath": "images/tabbar/1.png",
+        "selectedIconPath": "images/tabbar/11.png"
+      },
+      {
+        "pagePath": "pages/leisure/home/home",
+        "text": "新鲜事",
+        "iconPath": "images/tabbar/2.png",
+        "selectedIconPath": "images/tabbar/22.png"
+      },
+      {
+        "pagePath": "pages/about/home/home",
+        "text": "我的",
+        "iconPath": "images/tabbar/3.png",
+        "selectedIconPath": "images/tabbar/33.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
