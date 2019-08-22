@@ -48,14 +48,45 @@
 			"currentL": -1,
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
-			"current": 0,
+			"current": 3,
 			"list": [
 				{
 					"id": 0,
 					"name": "学校地址",
 					"pathName": "pages/index/map/map",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "鸡汤说",
+					"pathName": "pages/article/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/phone/phone",
+					"pathName": "pages/index/phone/phone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/home/home",
+					"pathName": "pages/index/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "天气",
+					"pathName": "pages/weather/main",
 					"scene": null
 				}
 			]

@@ -1,5 +1,6 @@
 // var e = wx.cloud.database();
-
+import { Home } from 'home-model.js';
+var home = new Home();
 Page({
     data: {
         banner: [ "https://612d-a-e8726c-1258823957.tcb.qcloud.la/login_banner.png" ],
@@ -9,18 +10,17 @@ Page({
         dice: [ "first", "second", "third", "fourth", "fifth", "sixth" ]
     },
     onLoad: function() {
-         this.getBanner();
+      wx.showLoading({ title: '加载中', icon: 'loading', duration: 10000 });
+        this.getBanner();
         //  this.getWeather();
     },
     getBanner: function() {
-        // var a = this;
-        // e.collection("banner").get({
-        //     success: function(e) {
-        //         a.setData({
-        //             banner: e.data
-        //         });
-        //     }
-        // });
+      home.getBanner((res)=>{
+        this.setData({
+          banner: res.data
+        })
+      })
+      wx.hideLoading()
     },
     getWeather: function() {
         // var e = this;
@@ -92,7 +92,7 @@ Page({
     },
     onShareAppMessage: function() {
         return {
-            title: "嗨尔社联校园助手",
+          title: "掌上嗨尔社联",
             path: "/pages/index/home/home"
         };
     }

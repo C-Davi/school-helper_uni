@@ -2,7 +2,7 @@
 <view class="phone" wx:for="{{phones}}" wx:key="">
     <view class="phone-name">
         <text>部门</text>
-        <text>{{item.name}}</text>
+        <text>{{item.s_name}}</text>
     </view>
     <view bindtap="callPhone" class="phone-value" data-phone="{{item.phone}}">
         <text>联系方式</text>

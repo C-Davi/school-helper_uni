@@ -28,7 +28,7 @@ Page({
             data: JSON.stringify(this.data.news[e]),
             success: function(t) {
                 wx.navigateTo({
-                    url: "index/index"
+                    url: "../news/index/index"
                 });
             }
         });

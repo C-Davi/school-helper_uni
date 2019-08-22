@@ -1,5 +1,6 @@
 var a = getApp();
-
+import { About } from '../about-model.js';
+var about = new About();
 Page({
     data: {
         StatusBar: a.globalData.StatusBar,
@@ -7,7 +8,16 @@ Page({
         Custom: a.globalData.Custom,
         showModal: !1
     },
-    onLoad: function() {},
+    onLoad: function() {
+      this.getLogo()
+    },
+    getLogo:function(){
+      about.getLogo((res)=>{
+        this.setData({
+          logo_url: res.data.img_url
+        })
+      })
+    },
     showModal: function() {
         this.setData({
             showModal: !0

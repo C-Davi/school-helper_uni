@@ -1,17 +1,18 @@
-var a = wx.cloud.database();
-
+import { Phone } from 'phone-model.js';
+var phone = new Phone();
 Page({
     data: {
         phones: []
     },
     onLoad: function() {
-        var e = this;
-        a.collection("phone").get().then(function(a) {
-            var t = a.data;
-            e.setData({
-                phones: t
-            });
-        });
+      this.getPhone();
+    },
+    getPhone:function(){
+      phone.getAll((res)=>{
+        this.setData({
+          phones:res.data
+        })
+      })
     },
     callPhone: function(a) {
         var e = a.currentTarget.dataset.phone;

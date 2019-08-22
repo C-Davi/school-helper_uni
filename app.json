@@ -4,6 +4,7 @@
     "pages/index/home/home",
     "pages/leisure/home/home",
     "pages/about/home/home",
+    "pages/article/index",
     "pages/index/score/score",
     "pages/index/score/index/index",
     "pages/index/map/map",
@@ -12,16 +13,17 @@
     "pages/index/asso/asso",
     "pages/index/asso/index/index",
     "pages/index/map/index/index",
-    "pages/index/phone/phone"
+    "pages/index/phone/phone",
+    "pages/weather/main"
   ],
   "window": {
-    "navigationBarTitleText": "嗨尔社联助手",
+    "navigationBarTitleText": "掌上嗨尔社联",
     "navigationBarTextStyle": "black",
-    "navigationBarBackgroundColor": "#ffe411"
+    "navigationBarBackgroundColor": "#2dc799"
   },
   "tabBar": {
     "color": "#000",
-    "selectedColor": "#11a3ff",
+    "selectedColor": "#2dc799",
     "list": [
       {
         "pagePath": "pages/index/home/home",
@@ -30,8 +32,8 @@
         "selectedIconPath": "images/tabbar/11.png"
       },
       {
-        "pagePath": "pages/leisure/home/home",
-        "text": "新鲜事",
+        "pagePath": "pages/article/index",
+        "text": "鸡汤说",
         "iconPath": "images/tabbar/2.png",
         "selectedIconPath": "images/tabbar/22.png"
       },
