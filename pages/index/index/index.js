@@ -1,15 +1,22 @@
+import { Index } from 'index-model.js';
+var index = new Index();
 Page({
   data: {
     remind: '加载中',
     angle: 0,
     userInfo: {
-      avatarUrl: 'https://tvax3.sinaimg.cn/crop.8.7.322.322.180/8970ff1ely8frdenkcgutj209k09kdgw.jpg'
+      avatarUrl: 'https://shelian.qtc369.com/images/20190821/2ecc3f99a443e5fb93124d3e0e0b3472.jpg'
     }
     },
     onLoad: function (n) {
       wx.setNavigationBarTitle({
         title: `掌上嗨尔社联`
       });
+      index.getLogo((res)=>{
+          this.setData({
+            logoUrl:res.data.img_url
+          })
+      })
       // setTimeout(function () {
       //   wx.switchTab({
       //     url: "../home/home"

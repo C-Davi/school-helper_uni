@@ -1,5 +1,6 @@
 // var e = wx.cloud.database();
-
+import { Home } from 'home-model.js';
+var home = new Home();
 Page({
     data: {
         banner: [ "https://612d-a-e8726c-1258823957.tcb.qcloud.la/login_banner.png" ],
@@ -9,18 +10,15 @@ Page({
         dice: [ "first", "second", "third", "fourth", "fifth", "sixth" ]
     },
     onLoad: function() {
-        //  this.getBanner();
+        this.getBanner();
         //  this.getWeather();
     },
     getBanner: function() {
-        // var a = this;
-        // e.collection("banner").get({
-        //     success: function(e) {
-        //         a.setData({
-        //             banner: e.data
-        //         });
-        //     }
-        // });
+      home.getBanner((res)=>{
+        this.setData({
+          banner: res.data
+        })
+      })
     },
     getWeather: function() {
         // var e = this;

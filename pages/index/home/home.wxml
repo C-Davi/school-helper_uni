@@ -59,8 +59,8 @@
 </template>
 <swiper autoplay circular class="header" interval="3000">
     <swiper-item wx:for="{{banner}}" wx:key="">
-        <navigator hoverClass="none" url="{{item.url}}">
-            <image class="header-banner" mode="aspectFill" src="{{item.img}}"></image>
+        <navigator hoverClass="none" url="{{item.img_url}}">
+            <image class="header-banner" mode="aspectFill" src="{{item.img_url}}"></image>
         </navigator>
     </swiper-item>
 </swiper>
