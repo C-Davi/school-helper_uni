@@ -13,7 +13,8 @@
     "pages/index/asso/asso",
     "pages/index/asso/index/index",
     "pages/index/map/index/index",
-    "pages/index/phone/phone"
+    "pages/index/phone/phone",
+    "pages/weather/main"
   ],
   "window": {
     "navigationBarTitleText": "掌上嗨尔社联",
