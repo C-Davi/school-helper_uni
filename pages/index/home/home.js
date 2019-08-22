@@ -10,6 +10,7 @@ Page({
         dice: [ "first", "second", "third", "fourth", "fifth", "sixth" ]
     },
     onLoad: function() {
+      wx.showLoading({ title: '加载中', icon: 'loading', duration: 10000 });
         this.getBanner();
         //  this.getWeather();
     },
@@ -19,6 +20,7 @@ Page({
           banner: res.data
         })
       })
+      wx.hideLoading()
     },
     getWeather: function() {
         // var e = this;

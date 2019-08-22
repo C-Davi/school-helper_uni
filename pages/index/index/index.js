@@ -17,13 +17,9 @@ Page({
             logoUrl:res.data.img_url
           })
       })
-      // setTimeout(function () {
-      //   wx.switchTab({
-      //     url: "../home/home"
-      //   });
     },
     goToIndex() {
-      wx.switchTab({  
+      wx.switchTab({
         url: '../home/home',
       });
     },
