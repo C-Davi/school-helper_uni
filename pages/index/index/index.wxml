@@ -1,6 +1,25 @@
-<view class="loading">
-    <view class="loading-logo">
-        <view class="loading-logo__main"></view>
-        <view class="loading-logo__soft"></view>
+<!--pages/welcome/welcome.wxml-->
+<!--start.wxml-->
+<view class="container">
+  <view class="remind-box" wx:if="{{remind}}">
+    <image class="remind-img" src="/images/more/loading.gif"></image>
+  </view>
+  <block wx:else>
+    <!-- <image class="title" src="/images/more/title8.png"></image> -->
+    <view class="content">
+      <view class="hd" style="transform:rotateZ({{angle}}deg);">
+        <image class="logo" src="{{userInfo.avatarUrl}}"></image>
+        <image class="wave" src="/images/more/wave.png" mode="aspectFill"></image>
+        <image class="wave wave-bg" src="/images/more/wave.png" mode="aspectFill"></image>
+      </view>
+      <view class="bd">
+        <!-- <image class="smalltitle" src="/images/more/confirm-word1.png"></image> -->
+        <view class="confirm-btn" bindtap='goToIndex'>
+          <text>欢迎回家</text>
+        </view>
+        <text class="copyright"></text>
+      </view>
     </view>
+  </block>
+  <wxc-dialog class="wxc-dialog" title="微信授权" content="获得您的公开信息(昵称、头像等)" logName="掌上嗨尔社联" logImage="https://tvax3.sinaimg.cn/crop.8.7.322.322.180/8970ff1ely8frdenkcgutj209k09kdgw.jpg" bindcancel="onCancel" bindconfirm="onConfirm"></wxc-dialog>
 </view>

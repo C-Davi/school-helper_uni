@@ -14,10 +14,10 @@
         </button>
     </view>
     <view bindlongtap="copyAppid" class="main-desc">
-        <image class="main-desc__logo" src="https://612d-a-e8726c-1258823957.tcb.qcloud.la/logo/logo.png"></image>
+        <!-- <image class="main-desc__logo" src="https://612d-a-e8726c-1258823957.tcb.qcloud.la/logo/logo.png"></image> -->
         <text>
       嗨尔社联
-      东风吹，战鼓擂，嗨尔社联怕过谁！
+      便捷服务只为青职的你！
       公众号 <text class="appid">嗨尔社联</text>
       (长摁复制)
     </text>

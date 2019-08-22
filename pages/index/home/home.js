@@ -9,7 +9,7 @@ Page({
         dice: [ "first", "second", "third", "fourth", "fifth", "sixth" ]
     },
     onLoad: function() {
-         this.getBanner();
+        //  this.getBanner();
         //  this.getWeather();
     },
     getBanner: function() {
@@ -92,7 +92,7 @@ Page({
     },
     onShareAppMessage: function() {
         return {
-            title: "嗨尔社联校园助手",
+          title: "掌上嗨尔社联",
             path: "/pages/index/home/home"
         };
     }

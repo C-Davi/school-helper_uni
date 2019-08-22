@@ -1,7 +1,7 @@
 <view class="custom" style="height: {{CustomBar}}px; padding-top: {{StatusBar}}px; background-color: var(--primary);">
     <navigator class="custom-back" openType="navigateBack"></navigator>
     <view class="custom-name">
-    北校区
+    黄岛校区
   </view>
 </view>
 <swiper class="tab" current="{{current}}" nextMargin="645rpx">

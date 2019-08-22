@@ -48,6 +48,10 @@
 			"currentL": -1,
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 0,
 			"list": [
@@ -55,6 +59,13 @@
 					"id": 0,
 					"name": "学校地址",
 					"pathName": "pages/index/map/map",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "鸡汤说",
+					"pathName": "pages/article/index",
 					"query": "",
 					"scene": null
 				}

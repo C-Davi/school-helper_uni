@@ -59,15 +59,9 @@ Page({
         this.setData({
             markers: []
         }),
-        // wx.request({
-        //   url: 'https://www.qtc369.com/api/v1/schedules/'+ t,
-        //   success:function(t) {
-        //     console.log(t)
-        //   }
-        // })
          wx.request({
             // url: "https://www.zzuyinluo.top/schedules/lonlat/" + t,
-            url: "https://www.qtc369.com/api/v1/schedules/" + t,
+            url: "https://shelian.qtc369.com/api/v1/schedules/" + t,
             success: function(t) {
               console.log(t.data.data);
                 for (var a = t.data.data, n = [], o = [], i = 0; i < a.length; i++) {
