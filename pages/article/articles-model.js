@@ -15,5 +15,17 @@ class Articles extends Base{
     };
     this.request(params); 
   }
+
+  changeLiked(data, callback){
+    var params = {
+      url: 'article/change',
+      type: 'post',
+      data: data,
+      sCallback: function (data) {
+        callback && callback(data);
+      }
+    };
+    this.request(params);
+  }
 }
 export { Articles };

@@ -29,7 +29,7 @@
                         <view class="like-text">扎心</view>
                     </button>
                 </form>
-                <form bindsubmit="goArticle" data-article-id="{{item.id}}" data-article-index="{{index}}" reportSubmit="true">
+                <!-- <form bindsubmit="goArticle" data-article-id="{{item.id}}" data-article-index="{{index}}" reportSubmit="true">
                     <button class="like" formType="submit" hoverClass="class-hover" wx:if="{{!sensitive}}">
                         <view class="like-image">
                             <image class="like-icon" src="/image/comment.png"></image>
@@ -39,7 +39,7 @@
                         </view>
                         <view class="like-text">补刀</view>
                     </button>
-                </form>
+                </form> -->
             </view>
         </view>
     </view>
@@ -47,6 +47,7 @@
         <ad unitId="adunit-0cc2c6eb033128d1"></ad>
     </view>
 </template>
+<!-- 热 -->
 <template name="itemCardHot">
     <view class="main-list-item">
         <form bindsubmit="goArticle" data-article-id="{{item.id}}" data-article-index="{{index}}" reportSubmit="true">
@@ -83,7 +84,7 @@
                         <view class="like-text">扎心</view>
                     </button>
                 </form>
-                <form bindsubmit="goArticle" data-article-id="{{item.id}}" data-article-index="{{index}}" reportSubmit="true">
+                <!-- <form bindsubmit="goArticle" data-article-id="{{item.id}}" data-article-index="{{index}}" reportSubmit="true">
                     <button class="like" formType="submit" hoverClass="class-hover" wx:if="{{!sensitive}}">
                         <view class="like-image">
                             <image class="like-icon" src="/image/comment.png"></image>
@@ -93,7 +94,7 @@
                         </view>
                         <view class="like-text">补刀</view>
                     </button>
-                </form>
+                </form> -->
             </view>
         </view>
     </view>
@@ -101,6 +102,7 @@
         <ad unitId="adunit-6950d410c8b19891"></ad>
     </view>
 </template>
+<!-- 冷 -->
 <template name="itemCardNew">
     <view class="main-list-item">
         <form bindsubmit="goArticle" data-article-id="{{item.id}}" data-article-index="{{index}}" reportSubmit="true">
@@ -137,7 +139,7 @@
                         <view class="like-text">扎心</view>
                     </button>
                 </form>
-                <form bindsubmit="goArticle" data-article-id="{{item.id}}" data-article-index="{{index}}" reportSubmit="true">
+                <!-- <form bindsubmit="goArticle" data-article-id="{{item.id}}" data-article-index="{{index}}" reportSubmit="true">
                     <button class="like" formType="submit" hoverClass="class-hover" wx:if="{{!sensitive}}">
                         <view class="like-image">
                             <image class="like-icon" src="/image/comment.png"></image>
@@ -147,7 +149,7 @@
                         </view>
                         <view class="like-text">补刀</view>
                     </button>
-                </form>
+                </form> -->
             </view>
         </view>
     </view>

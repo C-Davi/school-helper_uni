@@ -98,12 +98,12 @@
         <text class="main-list__name">通讯录</text>
     </view>
 </view>
-<view class="title">Games</view>
-<view class="main">
+<!-- + -->
+<!-- <view class="main">
     <view bindtap="goBoomPage" class="main-list" hoverClass="main-list--hover">
         <image class="main-list__icon" src="/images/icon/boom.svg"></image>
         <text class="main-list__name">扫雷boom</text>
-    </view>
+    </view> -->
     <!-- <view bindtap="showRockModal" class="main-list" hoverClass="main-list--hover">
         <image class="main-list__icon" src="/images/icon/dice.svg"></image>
         <text class="main-list__name">摇一摇</text>
@@ -112,7 +112,7 @@
         <image class="main-list__icon" src="/images/icon/plant.svg"></image>
         <text class="main-list__name">植物识别</text>
     </view> -->
-</view>
+<!-- </view> -->
 <view class="bottom"></view>
 <!-- <view bindtap="hideRockModal" class="cu-modal {{showRock?'show':''}}">
     <view catchtap class="cu-dialog modal">
