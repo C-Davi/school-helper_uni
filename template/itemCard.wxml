@@ -29,7 +29,7 @@
                         <view class="like-text">扎心</view>
                     </button>
                 </form>
-                <form bindsubmit="goArticle" data-article-id="{{item.id}}" data-article-index="{{index}}" reportSubmit="true">
+                <!-- <form bindsubmit="goArticle" data-article-id="{{item.id}}" data-article-index="{{index}}" reportSubmit="true">
                     <button class="like" formType="submit" hoverClass="class-hover" wx:if="{{!sensitive}}">
                         <view class="like-image">
                             <image class="like-icon" src="/image/comment.png"></image>
@@ -39,7 +39,7 @@
                         </view>
                         <view class="like-text">补刀</view>
                     </button>
-                </form>
+                </form> -->
             </view>
         </view>
     </view>
