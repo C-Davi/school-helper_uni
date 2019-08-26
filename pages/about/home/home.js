@@ -30,7 +30,7 @@ Page({
     },
     copyAppid: function() {
         console.log(111), wx.setClipboardData({
-            data: "wx23f9146e0ebc330f",
+            data: "gh_f5af1f194953",
             success: function(a) {
                 wx.showToast({
                     title: "复制成功"
@@ -40,7 +40,7 @@ Page({
     },
     onShareAppMessage: function() {
         return {
-            title: "ZZUhelper--北校区校园助手",
+            title: "掌上海尔社联",
             path: "/pages/index/home/home"
         };
     }

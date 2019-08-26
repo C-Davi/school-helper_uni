@@ -1,7 +1,8 @@
 var t = getApp();
 
 new Date();
-
+import { Index } from '../index/index-model.js';
+var index = new Index();
 Page({
     data: {
         StatusBar: t.globalData.StatusBar,
@@ -51,19 +52,24 @@ Page({
         showModal: !1
     },
     onReady: function() {
+      index.getLogo((res) => {
+        this.setData({
+          logo: res.data.img_url
+        })
+      })
         this.getRegionLoc(0);
     },
     getRegionLoc: function(t) {
-      console.log(t)
+
         var e = this;
         this.setData({
             markers: []
         }),
          wx.request({
-            // url: "https://www.zzuyinluo.top/schedules/lonlat/" + t,
+
             url: "https://shelian.qtc369.com/api/v1/schedules/" + t,
             success: function(t) {
-              console.log(t.data.data);
+            
                 for (var a = t.data.data, n = [], o = [], i = 0; i < a.length; i++) {
                     var r = {
                         id: a[i].id,
@@ -114,19 +120,19 @@ Page({
             view: n
         }), this.getFloorInfo(e);
     },
-    // getFloorInfo: function(t) {
-    //     var e = this;
-    //     wx.request({
-    //         url: "https://www.zzuyinluo.top/schedules/building/" + t,
-    //         success: function(t) {
-    //           console.log(t)
-    //             var a = t.data;
-    //             console.log(t.data), a.binfo = a.binfo.split("\\n"), e.setData({
-    //                 floorInfo: a
-    //             });
-    //         }
-    //     });
-    // },
+    getFloorInfo: function(t) {
+        // var e = this;
+        // wx.request({
+        //     url: "https://www.zzuyinluo.top/schedules/building/" + t,
+        //     success: function(t) {
+        //       console.log(t)
+        //         var a = t.data;
+        //         console.log(t.data), a.binfo = a.binfo.split("\\n"), e.setData({
+        //             floorInfo: a
+        //         });
+        //     }
+        // });
+    },
     handleShow: function() {
         var t = this.data.show;
         this.setData({
@@ -141,5 +147,11 @@ Page({
             latitude: a,
             longitude: n
         });
+    },
+    onShareAppMessage:function(t){
+        let title_str = t.target.dataset.name;
+        return {
+          title:'我在青职-'+title_str+'等你来呦！'
+        };
     }
 });

@@ -28,12 +28,14 @@ Page({
     this._onload();
   },
   _onload:function(){
-    // wx.showLoading({
-    //   title: '加载中',
-    //   mask: true
-    // });
     this.getArtiByType();
+    article.getShareImg((res)=>{
+      this.setData({
+        shareIg:res.data.img_url
+      })
+    })
   },
+ 
   // 获得扎心和取消扎心的
   getLikeIdS:function(){
 
@@ -141,6 +143,65 @@ Page({
       })
     }
   },
+  //展示分享
+  showShareDialog:function(e){
+    wx.showLoading({
+      title: '正在生成海报',
+      mask: !0
+    });
+    let id =e.currentTarget.dataset.articleId;
+      article.makeShare(id,(res) => {
+        this.setData({
+          isShareDialogShow: !0,
+          shareQuanImage: res.data.img_url
+        })
+      })
+    wx.hideLoading();
+  },
+  saveShareImage:function(){
+    wx.showLoading({
+      title: '正在保存海报',
+      mask: !0
+    });
+    wx.downloadFile({
+      url: this.data.shareQuanImage,
+      success:function(e){
+        console.log(e), wx.saveImageToPhotosAlbum({
+          filePath: e.tempFilePath,
+          success: function (e) {
+            console.log("图片保存成功", e),
+            wx.hideLoading(), wx.showToast({
+              title: '图片保存成功',
+              icon: "success",
+              duration: 1e3
+            });
+          },
+          fail: function (e) {
+            wx.hideLoading(), console.log("图片保存失败", e), 
+            wx.showModal({
+              title: "保存失败",
+              content: "图片保存失败，请检查图片保存设置是否打开",
+              confirmText: "前往设置",
+              showCancel: !0,
+              success: function (e) {
+                e.confirm && 
+                (console.log("图片保存失败弹窗下，用户点击前往设置"), wx.openSetting());
+              }
+            });
+          }
+        });
+      },
+      fail:function(){
+        wx.hideLoading();
+      }
+    })
+  },
+  //隐藏分享
+  hideShareDialog: function () {
+    this.setData({
+      isShareDialogShow: !1
+    });
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -206,6 +267,8 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    console.log(123)
+    return {};
   }
+
+
 })

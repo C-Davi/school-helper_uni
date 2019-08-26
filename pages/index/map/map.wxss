@@ -52,7 +52,17 @@ page {
     line-height: 20vw;
     font-size: 4vw;
 }
-
+.region-list__icon_share{
+  position: absolute;
+  right: 15vw;
+  top: 7vw;
+  width: 8vw;
+  height: 8vw;
+}
+.region-list__share{
+  width: 6vw;
+  height: 6vw;
+}
 .region-list__icon {
     position: absolute;
     right: 0;

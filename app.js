@@ -35,6 +35,7 @@ App({
         Custom: "",
         CustomBar: "",
         ScreenWidth: "",
-        UserInfo: ""
+        UserInfo: "",
+        Logo:''
     }
 });

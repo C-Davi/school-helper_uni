@@ -1,5 +1,6 @@
 import { Index } from 'index-model.js';
 var index = new Index();
+var app = getApp(); 
 Page({
   data: {
     remind: '加载中',
@@ -16,6 +17,7 @@ Page({
           this.setData({
             logoUrl:res.data.img_url
           })
+
       })
     },
     goToIndex() {

@@ -12,13 +12,16 @@
 </swiper>
 <map enable3D enableOverlooking enableTraffic showCompass showLocation bindmarkertap="getMarker" id="map" includePoints="{{include}}" markers="{{markers}}" style="height: calc(100vh - 80vw - {{CustomBar}}px); width: 100vw;"></map>
 <scroll-view scrollY class="region" scrollIntoView="{{view}}">
-    <view bindtap="getMarker" class="region-list" data-id="{{item.id}}" id="region-{{item.id}}" wx:for="{{markers}}">
-        <image class="region-list__pic" mode="aspectFit" src="https://612d-a-e8726c-1258823957.tcb.qcloud.la/logo/logo.png"></image>
+    <view bindtap="getMarker" wx:key="" class="region-list" data-id="{{item.id}}" id="region-{{item.id}}" wx:for="{{markers}}">
+        <image class="region-list__pic" mode="aspectFit" src="{{logo}}"></image>
         <text class="region-list__name">{{item.callout.content}}</text>
+        <button open-type="share" title="分享青职定位"data-name="{{item.callout.content}}" class="region-list__icon_share">
+          <image src="../../../images/icon/share.svg" class="region-list__share"></image>
+        </button>
         <image bindtap="openLoc" class="region-list__icon" data-id="{{item.id}}" src="../../../images/icon/nav.svg"></image>
     </view>
 </scroll-view>
-<view class="detail {{show?'show-detail':'hide-detail'}}" wx:if="{{floorInfo}}">
+<!-- <view class="detail {{show?'show-detail':'hide-detail'}}" wx:if="{{floorInfo}}">
     <view bindtap="handleShow" class="detail-arrow" wx:if="{{show}}">🔻</view>
     <view bindtap="handleShow" class="detail-arrow" wx:else>🔺</view>
     <view class="detail-header">
@@ -27,6 +30,6 @@
     </view>
     <view class="detail-content">
         <text wx:for="{{floorInfo.binfo}}">{{item}}
-</text>
+        </text>
     </view>
-</view>
+</view> -->

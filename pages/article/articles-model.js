@@ -27,5 +27,27 @@ class Articles extends Base{
     };
     this.request(params);
   }
+  getShareImg(callback){
+    var allParams = {
+      url: 'system/share',
+      data: { token: 'wxshelian' },
+      type: 'get',
+      sCallback: function (data) {
+        callback && callback(data);
+      }
+    };
+    this.request(allParams);
+  }
+  makeShare(data,callback){
+    var allParams = {
+      url: 'system/getShareCanv',
+      data: { token: 'wxshelian',id:data },
+      type: 'get',
+      sCallback: function (data) {
+        callback && callback(data);
+      }
+    };
+    this.request(allParams);
+  }
 }
 export { Articles };
