@@ -11,6 +11,18 @@ Page({
     onLoad: function() {
       this.getLogo()
     },
+    // 跳转学生信息
+    getStudent:function(){
+      wx.navigateTo({
+        url: '/pages/my/info/info',
+      })
+    },
+    // 跳转社团信息
+    getTeam:function(){
+      wx.navigateTo({
+        url: '/pages/my/team/team',
+      })
+    },
     getLogo:function(){
       about.getLogo((res)=>{
         this.setData({

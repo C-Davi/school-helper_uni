@@ -4,6 +4,14 @@
 </view>
 <view class="main">
     <view class="main-list">
+        <button class="main-list__item" bindtap="getStudent">
+            <image src="/images/icon/calendar.svg"></image>
+            <text>学生信息</text>
+        </button>
+        <button class="main-list__item" bindtap="getTeam">
+            <image src="/images/icon/canteen.svg"></image>
+            <text>社团信息</text>
+        </button>
         <button class="main-list__item" openType="feedback">
             <image src="/images/icon/feedback.svg"></image>
             <text>意见反馈</text>
@@ -19,7 +27,7 @@
       嗨尔社联
       便捷服务只为青职的你！
       公众号 <text class="appid">嗨尔社联</text>
-      (长摁复制)
+      (长摁复制) 
     </text>
     </view>
 </view>
