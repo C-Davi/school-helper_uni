@@ -6,10 +6,20 @@ Page({
         StatusBar: a.globalData.StatusBar,
         CustomBar: a.globalData.CustomBar,
         Custom: a.globalData.Custom,
-        showModal: !1
+        showModal: !1,
+        header:true
     },
     onLoad: function() {
-      this.getLogo()
+      this.getLogo();
+      this._onload();
+    },
+    _onload:function(){
+      let userInfo = wx.getStorageSync('userInfo');
+      if(userInfo){
+          this.setData({
+            header:false
+          })
+      }
     },
     // 跳转学生信息
     getStudent:function(){
