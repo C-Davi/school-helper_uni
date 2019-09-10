@@ -16,7 +16,8 @@
     "pages/index/phone/phone",
     "pages/weather/main",
     "pages/my/info/info",
-    "pages/my/team/team"
+    "pages/my/team/team",
+    "pages/my/bind/bind"
   ],
   "window": {
     "navigationBarTitleText": "掌上嗨尔社联",

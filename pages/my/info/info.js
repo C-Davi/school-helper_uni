@@ -1,4 +1,6 @@
 // pages/my/info/info.js
+import { My } from '../my-model.js';
+var my = new My();
 Page({
 
   /**
@@ -12,9 +14,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+      this._onload();
   },
 
+  _onload:function(){
+    this.checkBindSid();
+  },
+  // 是否绑定学生信息
+  checkBindSid:function(){
+    my.checkBindSid((res)=>{
+        if(res.status==2){
+          wx.redirectTo({
+            url: '/pages/my/bind/bind',
+          })
+        }
+    });
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
