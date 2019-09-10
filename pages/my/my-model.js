@@ -27,5 +27,41 @@ class My extends Base {
     };
     this.request(allParams);
   }
+  //获取全部院系
+  getColleges(type,callback){
+    var allParams = {
+      url: 'user/getGroupByType',
+      data: { type: type},
+      type: 'post',
+      sCallback: function (data) {
+        callback && callback(data);
+      }
+    };
+    this.request(allParams);
+  }
+  //获取全部专业
+  getMajor(id, callback) {
+    var allParams = {
+      url: 'user/getGroupByType',
+      data: { id: id, type: 2 },
+      type: 'post',
+      sCallback: function (data) {
+        callback && callback(data);
+      }
+    };
+    this.request(allParams);
+  }
+  //获取全部班级
+  getClass(id, callback) {
+    var allParams = {
+      url: 'user/getGroupByType',
+      data: { id: id ,type:3},
+      type: 'post',
+      sCallback: function (data) {
+        callback && callback(data);
+      }
+    };
+    this.request(allParams);
+  }
 }
 export { My };

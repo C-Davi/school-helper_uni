@@ -21,14 +21,14 @@
         <view class='fo-28 bold'>学生证正面(必填):</view>
         <view class='tuu panel-center item-center fo-g fo-50' style="background-image:url({{tmp_stu_card}})" data-name='stu_card' bindtap='choose'> + </view>
       </view>
-      <button class='btns ' form-type="submit">提交申请</button>
+      <button class='btns ' form-type="submit">确认绑定</button>
     </form>
 
   </view>
   <view wx:if="{{!show && !isUpdate}}">
-    <view wx:if="{{res.state == 0}}">
+    <view wx:if="{{res == 0}}">
       <view class='text-center'>
-        <image src='/img/sh.png' style='width:200rpx;height:200rpx'></image>
+        <image src='/images/img/sh.png' style='width:200rpx;height:200rpx'></image>
       </view>
       <view class='fo-30 text-center'>需要1-3个工作日完成审核，请耐心等待</view>
     </view>

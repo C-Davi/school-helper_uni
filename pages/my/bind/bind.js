@@ -18,6 +18,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      show:false,
+      isUpdate:false,
+      res:0
+    })
   },
   //选择照片
   choose(e) {
