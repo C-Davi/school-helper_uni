@@ -3,23 +3,24 @@ class My extends Base {
   constructor() {
     super();
   }
-  // 检查是否存在学生id
-  checkSid(callBack){
-    var params ={
-      url:'user/checkBindSid',
-      data:{token:'wxshelian'},
-      type:'get',
+  // 判断是否绑定学生信息
+  checkBindSid(callback) {
+    var allParams = {
+      url: 'user/checkBindSid',
+      data: { token: 'wxshelian' },
+      type: 'get',
       sCallback: function (data) {
         callback && callback(data);
       }
     };
     this.request(allParams);
   }
-  getLogo(callback) {
-    var allParams = {
-      url: 'system/logo',
-      data: { token: 'wxshelian' },
-      type: 'get',
+  // 提交学生信息
+  submitStuInfo(data,callback){
+    var  allParams = {
+      url:'user/upStuInfo',
+      data:data,
+      type:'post',
       sCallback: function (data) {
         callback && callback(data);
       }

@@ -51,16 +51,16 @@ Page({
         show: !0,
         showModal: !1
     },
-    onReady: function() {
+    onLoad:function(){
       index.getLogo((res) => {
         this.setData({
           logo: res.data.img_url
         })
       })
-        this.getRegionLoc(0);
+      this.getRegionLoc(0);
     },
-    getRegionLoc: function(t) {
 
+    getRegionLoc: function(t) {
         var e = this;
         this.setData({
             markers: []
@@ -69,7 +69,7 @@ Page({
 
             url: "https://shelian.qtc369.com/api/v1/schedules/" + t,
             success: function(t) {
-            
+                console.log(t)
                 for (var a = t.data.data, n = [], o = [], i = 0; i < a.length; i++) {
                     var r = {
                         id: a[i].id,
