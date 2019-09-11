@@ -92,12 +92,44 @@ Page({
           this.getGroup();
         }
         if(res.status ==1){
-              this.setData({
-                show:false,
-                isUpdate:false
-              })
+          let status = res.data.type;
+          console.log(status)
+          if(status==3){
+            this.setData({
+              show: false,
+              isUpdate: false,
+              status:3
+            })
+          }else if(status==2){
+            console.log(222)
+            this.setData({
+              status:2,
+              show:false,
+              isUpdate:false,
+              msg:'请仔细审阅提交的信息是否真实'
+            })
+          }else if(status==1){
+            wx.showLoading({
+              title: '加载中',
+            })
+            this.setData({
+              show: false,
+              isUpdate: false,
+              status: 1,
+              info:res.data.info
+            })
+            setTimeout(function () {
+              wx.hideLoading()
+            }, 1500);
+          }
         }
     });
+  },
+  gotoUpdate:function(){
+    this.setData({
+      show: true,
+      isUpdate: true
+    })
   },
   //性别选择
   sexChange:function(e){
