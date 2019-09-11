@@ -35,7 +35,6 @@ Page({
 
   _onload:function(){
     this.checkBindSid();
-    this.getGroup();
   },
   getGroup:function(){
     let type = 1;
@@ -88,11 +87,15 @@ Page({
   // 是否绑定学生信息
   checkBindSid:function(){
     my.checkBindSid((res)=>{
+      console.log(res)
         if(res.status==2){
-
+          this.getGroup();
         }
         if(res.status ==1){
-              
+              this.setData({
+                show:false,
+                isUpdate:false
+              })
         }
     });
   },

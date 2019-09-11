@@ -62,7 +62,7 @@
 
   </view>
   <view wx:if="{{!show && !isUpdate}}">
-    <view wx:if="{{res == 0}}">
+    <view wx:if="{{!isUpdate}}">
       <view class='text-center'>
         <image src='/images/img/sh.png' style='width:200rpx;height:200rpx'></image>
       </view>
