@@ -62,41 +62,47 @@
 
   </view>
   <view wx:if="{{!show && !isUpdate}}">
-    <view wx:if="{{!isUpdate}}">
+    <view wx:if="{{status==3}}">
       <view class='text-center'>
         <image src='/images/img/sh.png' style='width:200rpx;height:200rpx'></image>
       </view>
       <view class='fo-30 text-center'>需要1-3个工作日完成审核，请耐心等待</view>
     </view>
 
-    <view wx:if="{{res.state == 1}}">
+    <view wx:if="{{status==1}}">
       <view class='text-center'>
-        <image src='/img/sh1.png' style='width:200rpx;height:200rpx'></image>
+        <image src='/images/img/sh1.png' style='width:200rpx;height:200rpx'></image>
       </view>
-      <view class='fo-30 text-center'>审核成功，您可以接单啦</view>
-      <view class='fo-26 ma-t20 text-center ma-b20'>以下为服务费用收取参考表</view>
-      <view class='border ma-t20' style='width:450rpx;margin:auto'>
-        <view class='panel-start border-b pa-t20 pa-b20' style='width:450rpx' >
-          <view class='text-center fo-28' style='width:150rpx'>服务项</view>
-          <view class='text-center fo-28' style='width:150rpx'>平台获得</view>
-          <view class='text-center fo-28' style='width:150rpx'>用户获得</view>
-        </view>
-        <view class='panel-start border-b pa-t20 pa-b20' style='width:450rpx' wx:for="{{server}}" wx:if="{{item.server_name != '打印服务' && item.server_name != '快递代取' }}" >
-          <view class='text-center fo-28' style='width:150rpx'>{{item.server_name}}</view>
-          <view class='text-center fo-28' style='width:150rpx'>{{(item.pk_server)}}%</view>
-          <view class='text-center fo-28' style='width:150rpx'>{{item.user_sy*100}}%</view>
-        </view>
+      <view class='fo-30 text-center'>审核成功</view>
+
+      <view class='panel-between border-b pa-t30 pa-b10 '>
+        <view class='fo-28 bold'>{{info.name}}</view>
+      </view>
+
+      <view class='panel-between border-b pa-t30 pa-b10'>
+        <view class='fo-28 bold'>{{info.code}}</view>
+      </view>
+
+      <view class='panel-between border-b pa-t30 pa-b10'>
+        <view class='fo-28 bold'>{{info.sex}}</view>
+      </view>
+
+      <view class='panel-between border-b pa-t30 pa-b10'>
+        <view class='fo-28 bold'>{{info.group}}</view>
+      </view>
+
+      <view class='pa-t30 pa-b10'>
+        <view class='tuu panel-center item-center fo-g fo-50' style="background-image:url({{info.img}})" > </view>
       </view>
     </view>
 
-    <view wx:if="{{res.state == 2  && !isUpdate}}">
+    <view wx:if="{{status==2  && !isUpdate}}">
       <view class='text-center'>
-        <image src='/img/sh2.png' style='width:200rpx;height:200rpx'></image>
+        <image src='/images/img/sh2.png' style='width:200rpx;height:200rpx'></image>
       </view>
       <view class='fo-30 text-center'>审核失败</view>
-      <view class='fo-30 text-center'>{{res.msg}}</view>
-      <view class='fo-30 text-center fo-t' bindtap='gotoUpdate'>去修改</view>
+      <view class='fo-30 text-center' style="padding-top:40rpx;color:red;">{{msg}}</view>
+      <view class='fo-30 text-center fo-t' style="margin-top:30rpx;" bindtap='gotoUpdate'>去修改</view>
     </view>
-    <!-- <view class="fo-30 text-center fo-t" style='margin-top:100rpx' bindtap='makePhone'></view> -->
   </view>
 </view>
