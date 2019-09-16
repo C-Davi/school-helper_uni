@@ -64,18 +64,18 @@
         </navigator>
     </swiper-item>
 </swiper>
-<!-- <view class="title">Study</view>
+<view class="title">学在青职</view>
 <view class="main">
     <view bindtap="goScorePage" class="main-list" hoverClass="main-list--hover">
-        <image class="main-list__icon" src="/images/icon/search.svg"></image>
-        <text class="main-list__name">查成绩</text>
+        <image class="main-list__icon" src="/images/icon/asso.svg"></image>
+        <text class="main-list__name">社团组织</text>
     </view>
-     <view class="main-list" hoverClass="main-list--hover">
+     <!-- <view class="main-list" hoverClass="main-list--hover">
         <text class="main-list__icon" data-name="R">32</text>
         <text class="main-list__name">空教室</text>
-    </view>
-</view> -->
-<view class="title">Life</view>
+    </view> -->
+</view>
+<view class="title">住在青职</view>
 <view class="main">
     <view bindtap="goMapPage" class="main-list" hoverClass="main-list--hover">
         <image class="main-list__icon" src="/images/icon/map.svg"></image>

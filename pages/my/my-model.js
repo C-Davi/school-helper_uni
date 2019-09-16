@@ -15,6 +15,17 @@ class My extends Base {
     };
     this.request(allParams);
   }
+  getStuTeams(callback){
+    var allParams = {
+      url: 'user/getStuTeams',
+      data: { token: 'wxshelian' },
+      type: 'get',
+      sCallback: function (data) {
+        callback && callback(data);
+      }
+    };
+    this.request(allParams);
+  }
   // 提交学生信息
   submitStuInfo(data,callback){
     var  allParams = {

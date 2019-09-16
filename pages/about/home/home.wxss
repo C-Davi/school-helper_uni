@@ -1,11 +1,23 @@
 .header {
-    position: relative;
     margin: 5vw auto 0;
-    height: 30vw;
+    height: 25vw;
     width: 90vw;
-    background-color: var(--primary);
-    border-radius: 2vw;
-    box-shadow: 2vw 0 2vw -1vw var(--cyan);
+}
+
+button {
+    box-shadow: 0 0 0 transparent;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 40vw;
+    clip-path: polygon(0% 0%,100% 0%,100% 70%,0% 100%);
+    background-color: #2dc799;
 }
 
 .header-avatar {
@@ -25,7 +37,7 @@
     width: 20vw;
     height: 20vw;
     border-radius: 50%;
-    border: 5vw solid var(--primary);
+    border: 5vw solid 2dc799;
     background-color: transparent;
 }
 
@@ -47,10 +59,10 @@
     display: flex;
     flex-flow: column wrap;
     justify-content: start;
-    border-radius: 2vw;
+    border-radius: 1.5vw;
     margin-top: 5vw;
     overflow: hidden;
-    box-shadow: 0 2vw 2vw -1vw gainsboro;
+    box-shadow: 0 0 2vw var(--shadow);
 }
 
 .main-list>button {
@@ -88,11 +100,11 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    width: 90vw;
+    width: 80vw;
     padding: 5vw;
     margin: 5vw 0;
-    border-radius: 2vw;
-    box-shadow: 0 2vw 2vw -1vw gainsboro;
+    border-radius: 1.5vw;
+    box-shadow: 0 0 2vw var(--shadow);
     background-color: #fff;
 }
 

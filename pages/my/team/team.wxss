@@ -1,1 +1,63 @@
-/* pages/my/team/team.wxss */
+.body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 2vh;
+}
+.common-d{
+  display: flex;
+  width: 97vw;
+  border: 1rpx solid rebeccapurple; 
+}
+.top{
+  display: flex;
+  flex-direction: row;
+  height: 20vh;
+  border: 4rpx solid white;
+  border-radius: 10rpx;
+  background-color: #adadad;
+}
+.bottom{
+  height: 77vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.avatar{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 130rpx;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+  border: 6rpx solid #FFCC66;
+  background-color: #FFCC66
+}
+.u-info{
+  display: flex;
+  flex-direction: column;
+  width: 65vw;
+  justify-content: center;
+  align-items: center;
+}
+.u-info-r{
+  display: flex;
+  flex-direction: column;
+}
+.b-title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.team-type{
+  width: 47vw;
+  border: 2rpx solid white;
+  background-color:#adadad;
+  padding: 5rpx; 
+  border-radius: 13rpx;
+  font-size: 40rpx;
+}

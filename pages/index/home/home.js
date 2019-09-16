@@ -35,7 +35,7 @@ Page({
     },
     goScorePage: function() {
         wx.navigateTo({
-            url: "../score/score"
+            url: "../../leisure/home/home"
         });
     },
     goMapPage: function() {

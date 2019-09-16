@@ -1,2 +1,22 @@
-<!--pages/my/team/team.wxml-->
-<text>pages/my/team/team.wxml</text>
+<view class="body">
+    <view class="common-d top">
+      <view class="avatar">
+          <open-data type="userAvatarUrl" mode="aspectFill"></open-data>
+      </view>
+      <view class="u-info">
+        <view class="u-info-r">
+            <text class="txt">各社团总学分：{{totalPoints}}</text>
+            <text class="txt">技能社团学分：{{enPoints}}</text>
+            <text class="txt">身心社团学分：{{mdPoints}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="common-d bottom">
+      <view class="b-title">
+        <view class="team-type">身心类社团</view>   
+        <view class="team-type">技能类社团</view>
+      </view>
+      <view class="b-content"></view>
+      <view class="b-content-empty"></view>
+    </view>
+</view>

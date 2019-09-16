@@ -19,7 +19,8 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		}
+		},
+		"bundle": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.7.7",
@@ -81,6 +82,26 @@
 					"name": "pages/my/info/info",
 					"pathName": "pages/my/info/info",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的社团",
+					"pathName": "pages/my/team/team",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "社团组织",
+					"pathName": "pages/leisure/home/home",
 					"scene": null
 				}
 			]

@@ -47,7 +47,7 @@ page {
     font-weight: bold;
     padding-left: 3vw;
     margin-top: 3vw;
-    text-shadow: 2vw 2vw 3vw var(--primary);
+    text-shadow: 2vw 2vw 3vw #2dc799;
 }
 
 .main {
@@ -65,7 +65,7 @@ page {
     width: 20vw;
     height: 20vw;
     margin: 5vw 0 0 4vw;
-    background-color: var(--primary);
+    background-color: #2dc799;
     border-radius: 2vw;
     box-shadow: 0 2.5vw 1vw -1vw gainsboro;
     transition: all .1s linear;
