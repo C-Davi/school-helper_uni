@@ -6,8 +6,10 @@
         <image class="news-img" mode="aspectFill" src="{{img_pre}}{{item.logo}}"></image>
         <text class="news-name">
             {{item.team_name}}
-            <text class="new-stu"><image class="new-icon" src="/images/img/mt2.png"></image>纳新喽！</text>
         </text>
+        <view class="new-stu">
+              <image class="new-icon" src="/images/img/mt2.png"></image>纳新喽！
+            </view>
         <text class="news-times">{{item.desc_txt}}</text>
     </view>
 </view>
