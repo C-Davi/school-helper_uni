@@ -3,6 +3,7 @@
     "pages/index/index/index",
     "pages/index/home/home",
     "pages/leisure/home/home",
+    "pages/leisure/enroll/enroll",
     "pages/about/home/home",
     "pages/article/index",
     "pages/index/map/map",

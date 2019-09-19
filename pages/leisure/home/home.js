@@ -25,10 +25,10 @@ Page({
     },
     getTeamsByType:function(){
       let teamType = this.data.type;
-      console.log(teamType);
       wx.showLoading({
         title: '加载中',
       })
+      
       if(this.data.news!=''){
         if(teamType==1){
           this.setData({
@@ -40,8 +40,8 @@ Page({
           })
         }
       }else{
+        let teamType = this.data.type;
         team.getTeamsByType(teamType, (res) => {
-          console.log(res)
           if (res.status == 1) {
             let img_pre = res.data.img_pre;
             let list = res.data.list;
@@ -50,6 +50,13 @@ Page({
               news: list
             })
             if (teamType == 1) {
+              team.getTeamsByType(2,(res)=>{
+                if(res.status==1){
+                  this.setData({
+                    en:res.data.list
+                  })
+                }
+              })
               this.setData({
                 md: list
               })
