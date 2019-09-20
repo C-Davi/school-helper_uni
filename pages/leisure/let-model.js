@@ -49,6 +49,30 @@ class Let extends Base {
     };
     this.request(allParams);
   }
+  //提交社团申请
+  submitTeamApply(data,callback){
+    var allParams = {
+      url: 'teams/upStuInfo',
+      data: data,
+      type: 'post',
+      sCallback: function (data) {
+        callback && callback(data);
+      }
+    };
+    this.request(allParams);
+  }
+  //查询纳新进度
+  checkTeamSchedule(callback){
+    var allParams = {
+      url: 'teams/check',
+      data: { token: 'wxshelian' },
+      type: 'get',
+      sCallback: function (data) {
+        callback && callback(data);
+      }
+    };
+    this.request(allParams);
+  }
   //社团是否纳新
   teamCanApply(callback){
     var allParams = {
