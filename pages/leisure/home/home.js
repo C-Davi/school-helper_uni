@@ -8,7 +8,8 @@ Page({
         news: "",
         type:1,
         md:"",
-        en:""
+        en:"",
+        apply:false
     },
     onLoad: function() {
       
@@ -21,7 +22,17 @@ Page({
         //         });
         //     }
         // });
+        this.teamCanApply();
         this.getTeamsByType();
+    },
+    teamCanApply:function(){
+      team.teamCanApply((res)=>{
+        if(res.status==1){
+          this.setData({
+            apply:true
+          })
+        }
+      })
     },
     getTeamsByType:function(){
       let teamType = this.data.type;
@@ -90,15 +101,21 @@ Page({
       this.getTeamsByType();
     },
     goDetailPage: function(t) {
-        var e = t.currentTarget.dataset.index;
-        wx.setStorage({
-            key: "newsDetail",
-            data: JSON.stringify(this.data.news[e]),
-            success: function(t) {
-                wx.navigateTo({
-                    url: "../news/index/index"
-                });
-            }
-        });
+        // var e = t.currentTarget.dataset.index;
+        // wx.setStorage({
+        //     key: "newsDetail",
+        //     data: JSON.stringify(this.data.news[e]),
+        //     success: function(t) {
+        //         wx.navigateTo({
+        //             url: "../news/index/index"
+        //         });
+        //     }
+        // });
+    },
+    toApply:function(e){
+      let team_id = e.currentTarget.dataset['id'];
+      wx.navigateTo({
+        url:'../enroll/enroll?team_id='+team_id
+      })
     }
 });

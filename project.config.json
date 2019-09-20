@@ -102,6 +102,14 @@
 					"id": -1,
 					"name": "社团组织",
 					"pathName": "pages/leisure/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "社团组织报名",
+					"pathName": "pages/leisure/enroll/enroll",
+					"query": "team_id=5",
 					"scene": null
 				}
 			]
