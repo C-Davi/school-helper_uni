@@ -7,9 +7,9 @@
         <text class="news-name">
             {{item.team_name}}
         </text>
-        <view class="new-stu">
+        <view wx:if="{{apply}}" class="new-stu" data-id="{{item.id}}" bindtap="toApply">
               <image class="new-icon" src="/images/img/mt2.png"></image>纳新报名
-            </view>
+        </view>
         <text class="news-times">{{item.desc_txt}}</text>
     </view>
 </view>
