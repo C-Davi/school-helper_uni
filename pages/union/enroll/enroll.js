@@ -1,7 +1,7 @@
 import { My } from '../../my/my-model.js';
-import { Let } from '../let-model.js';
+import { Union } from '../union-model.js';
+var union = new Union();
 var my = new My();
-var team = new Let();
 Page({
 
   /**
@@ -12,7 +12,8 @@ Page({
     cert: '',
     show: true,
     isUpdate: false,
-    res:0,
+    branch_name:'',
+    res: 0,
     regulate: 1,
     regData: [
       { name: '否', value: 1, checked: 'true' },
@@ -27,104 +28,93 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      let team_id = options.team_id;
-      this.setData({
-        team_id:team_id
-      })
-      this._onload();
+    let union_id = options.union_id;
+    this.setData({
+      union_id: union_id
+    })
+    this._onload();
   },
-
   _onload:function(){
     wx.showLoading({
       title: '加载中',
     })
-    my.checkBindSid((res)=>{
-      if(res.status==2){
-          wx.showModal({
-            title: '还没有绑定学生信息呦',
-            content: '前去绑定学生信息',
-            cancelText:'不去',
-            confirmText:'好的',
-            success:function(res){
-              if (res.confirm){
-                wx.navigateTo({
-                  url: '/pages/my/info/info'
-                })
-              }else{
-                wx.navigateTo({
-                  url: '/pages/leisure/home/home'
-                })
-              }
+    my.checkBindSid((res) => {
+      if (res.status == 2) {
+        wx.showModal({
+          title: '还没有绑定学生信息呦',
+          content: '前去绑定学生信息',
+          cancelText: '不去',
+          confirmText: '好的',
+          success: function (res) {
+            if (res.confirm) {
+              wx.navigateTo({
+                url: '/pages/my/info/info'
+              })
+            } else {
+              wx.navigateTo({
+                url: '/pages/union/home/home'
+              })
             }
-          })
-      }else{
-      
-        team.checkTeamSchedule(this.data.team_id,(res)=>{
+          }
+        })
+      } else {
+
+        union.checkTeamSchedule(this.data.union_id, (res) => {
           console.log(res)
-          if(res.status==2){
-            this.getTeamById();
-          }else{
-            if(res.data.status==3){
-                  this.setData({
-                    show: false,
-                    isUpdate: false,
-                    status: 3
-                  })
-                  
-            } else if (res.data.status == 2){
+          if (res.status == 2) {
+            this.getUnionById();
+          } else {
+            if (res.data.status == 3) {
+              this.setData({
+                show: false,
+                isUpdate: false,
+                status: 3
+              })
+
+            } else if (res.data.status == 2) {
               this.setData({
                 status: 2,
                 show: false,
                 isUpdate: false,
-                msg: '您未被该社团录取'
+                msg: '您未被该社联组织录取'
               })
-            }else{
+            } else {
               this.setData({
                 show: false,
                 isUpdate: false,
                 status: 1
               })
-              
+
             }
             setTimeout(function () {
               wx.hideLoading()
             }, 1500);
           }
         })
-       
+
       }
     })
   },
-  //获得社团id
-  getTeamById:function(){
-    my.getStudentInfo((res)=>{
+  //获取社联组织by  Id
+  getUnionById:function(){
+    my.getStudentInfo((res) => {
       let stu_num = res.data.stu_code;
       this.setData({
         stu_num: stu_num
       })
     })
-    let team_id = this.data.team_id;
-    team.getTeamById(team_id,(res)=>{
-        console.log(res.data)
-        console.log(res.data.groupList)
-        this.setData({
-          groupArr: res.data.groupList,
-          group:res.data.arr,
-          groupId:res.data.groupList[0].key
-        })
+    let union_id = this.data.union_id;
+    union.getUnionById(union_id, (res) => {
+      this.setData({
+        branch_name:res.data.data.branch_name
+      })
     })
     setTimeout(function () {
       wx.hideLoading()
     }, 1500);
   },
-  //重新填写信息
-  goTeams: function () {
-    wx.navigateTo({
-      url: '/pages/leisure/home/home'
-    })
-  },
   //接受调剂
-  regChange:function(e){
+  regChange: function (e) {
     let regulate = e.detail.value;
     if (regulate == 2) {
       this.setData({
@@ -132,13 +122,12 @@ Page({
       })
     }
   },
-  //选择部门
-  groupChange:function(e){
-    let group_id = this.data.groupArr[e.detail.value].key;
-    this.setData({
-      groupIndex: e.detail.value,
-      groupId: group_id
-    })
+  //个人简介以及工作计划
+  bindTextAreaBlur:function(e){
+      let job_text = e.detail.value;
+      this.setData({
+        job_text:job_text
+      })
   },
   //选择照片
   choose(e) {
@@ -208,45 +197,59 @@ Page({
   // 表单提交
   formSubmit(e) {
     let formId = e.detail.formId
-     if (e.detail.value.stu_num == '') {
+    if (e.detail.value.stu_num == '') {
       wx.showToast({
         title: '请输入学生证号',
         icon: 'none'
       })
-    } else if(e.detail.value.stu_phone=='') {
-       wx.showToast({
-         title: '请输入联系方式',
-         icon: 'none'
-       })
-    }else if (this.data.stu_card == '' || this.data.stu_card.indexOf('tmp') > 0) {
+    } else if (e.detail.value.stu_phone == '') {
+      wx.showToast({
+        title: '请输入联系方式',
+        icon: 'none'
+      })
+    } else if (this.data.stu_card == '' || this.data.stu_card.indexOf('tmp') > 0) {
       wx.showToast({
         title: '请上传一寸免冠照片',
         icon: 'none'
       })
-     } else if (this.data.regulate == '') {
+    } else if (this.data.regulate == '') {
       wx.showToast({
         title: '请选择是否调剂',
         icon: 'none'
       })
-     } else if (this.data.groupId == 0) {
+    } else if (this.data.groupId == 0) {
       wx.showToast({
         title: '请选择加入部门',
         icon: 'none'
       })
-    } else {
+    } else if (e.detail.value.old_job==''){
+      wx.showToast({
+        title: '请填写曾任职务',
+        icon: 'none'
+      })
+    } else if(e.detail.value.new_job==''){
+      wx.showToast({
+        title: '请填写现任职务',
+        icon: 'none'
+      })
+    }else if (this.data.job_text==''){
+      wx.showToast({
+        title: '请填写个人简介和工作计划',
+        icon: 'none'
+      })
+    }else {
       wx.showLoading({
         title: '加载中',
       })
       let param = {
         form_id: formId,
-        stu_phone:e.detail.value.stu_phone,
+        stu_phone: e.detail.value.stu_phone,
         stu_num: e.detail.value.stu_num,
         stu_card: this.data.stu_card,
         regulate: this.data.regulate,
-        groupId: this.data.groupId,
-        teamId:this.data.team_id
+        unionId: this.data.union_id
       };
-       team.submitTeamApply(param, (res) => {
+      union.submitTeamApply(param, (res) => {
         wx.hideLoading();
         console.log(res)
         if (res.status == 1) {
@@ -265,13 +268,6 @@ Page({
 
     }
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
   /**
    * 生命周期函数--监听页面显示
    */

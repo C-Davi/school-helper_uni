@@ -1,0 +1,97 @@
+.nav {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: start;
+    align-items: center;
+    width: 100vw;
+    height: 12vw;
+    background-color: #fff;
+    box-shadow: 3vw 0 3vw -1vw gainsboro;
+}
+
+.nav-list {
+    position: relative;
+    width: 15vw;
+    margin-left: 5vw;
+    line-height: 8vw;
+    text-align: center;
+}
+
+.nav-list::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0;
+    height: 9vw;
+    border-bottom: 1vw solid var(--cyan);
+    border-radius: .5vw;
+    transition: 0.2s all cubic-bezier(1,0,0,1);
+}
+
+.nav-active.nav-list::after {
+    content: '';
+    left: 0;
+    width: 15vw;
+}
+
+.nav-active~.nav-list::after {
+    left: 0;
+}
+
+.main {
+    margin-top: 15vw;
+}
+
+.news {
+    position: relative;
+    width: 95vw;
+    height: 42vw;
+    margin-left: 2vw;
+    box-shadow: 1.5vw 0 2vw -1vw var(--blue);
+    margin-bottom: 2vw;
+    background-color: #fff;
+    border-radius: 1vw;
+}
+
+.news-img {
+    position: absolute;
+    left: 3vw;
+    top: 8vw;
+    width: 20vw;
+    height: 20vw;
+    /* background-color: #ffe411; */
+}
+
+.news-name {
+    position: absolute;
+    width: 70vw;
+    overflow: hidden;
+    left: 34vw;
+    font-size: 3.7vw;
+}
+.new-stu{
+    position: absolute;
+    right: 1vw;
+    top: 1vh;
+    width: 30vw;
+    height: 10vh;
+    text-align: right;
+    color: orangered;
+}
+.new-icon{
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.news-times {
+    position: absolute;
+    left: 34vw;
+    width: 60vw;
+    top: 12vw;
+    font-size: 3.5vw;
+    color: gray;
+}
