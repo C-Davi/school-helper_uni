@@ -46,7 +46,7 @@
       </view>
       <view class='pa-t30 pa-b10'>
         <view class='fo-28 bold'>个人简介及工作计划:</view>
-        <textarea class="job_desc" value="" bindblur="bindTextAreaBlur" maxlength="-1"></textarea>
+        <textarea class="job_desc" value="" bindblur="bindTextAreaBlur" maxlength="1024"></textarea>
       </view>
       <button class='btns ' form-type="submit">确认提交</button>
     </form>

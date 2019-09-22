@@ -31,3 +31,9 @@
   background-size: cover;
   background-position: center
 }
+.job_desc{
+  margin-top: 20rpx;
+  width: 100%;
+  border-radius: 10rpx;
+  border: 1px dotted #aaa;
+}

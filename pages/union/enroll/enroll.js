@@ -222,7 +222,12 @@ Page({
         title: '请选择加入部门',
         icon: 'none'
       })
-    } else if (e.detail.value.old_job==''){
+    } else if (e.detail.value.stu_face==''){
+      wx.showToast({
+        title: '请填写政治面貌',
+        icon: 'none'
+      })
+    }else if (e.detail.value.old_job==''){
       wx.showToast({
         title: '请填写曾任职务',
         icon: 'none'
@@ -247,7 +252,11 @@ Page({
         stu_num: e.detail.value.stu_num,
         stu_card: this.data.stu_card,
         regulate: this.data.regulate,
-        unionId: this.data.union_id
+        unionId: this.data.union_id,
+        job_desc:this.data.job_desc,
+        old_job:e.detail.value.old_job,
+        new_job:e.detail.value.new_job,
+        stu_face:e.detail.value.stu_face
       };
       union.submitTeamApply(param, (res) => {
         wx.hideLoading();

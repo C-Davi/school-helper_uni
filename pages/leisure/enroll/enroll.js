@@ -123,6 +123,19 @@ Page({
       url: '/pages/leisure/home/home'
     })
   },
+  //个人简介以及工作计划
+  bindTextAreaBlur: function (e) {
+    let job_text = e.detail.value;
+    this.setData({
+      job_text: job_text
+    })
+  },
+  bindTeamAreaBlur:function(e){
+    let team_text = e.detail.value;
+    this.setData({
+      team_text: team_text
+    })
+  },
   //接受调剂
   regChange:function(e){
     let regulate = e.detail.value;
@@ -233,7 +246,17 @@ Page({
         title: '请选择加入部门',
         icon: 'none'
       })
-    } else {
+     } else if (this.data.job_text==''){
+       wx.showToast({
+         title: '请填写个人简介',
+         icon: 'none'
+       })
+     } else if (this.data.team_text==''){
+       wx.showToast({
+         title: '请填写社团期望',
+         icon: 'none'
+       })
+    }else {
       wx.showLoading({
         title: '加载中',
       })
@@ -244,7 +267,9 @@ Page({
         stu_card: this.data.stu_card,
         regulate: this.data.regulate,
         groupId: this.data.groupId,
-        teamId:this.data.team_id
+        teamId:this.data.team_id,
+        job_desc:this.data.job_text,
+        team_desc:this.data.team_text
       };
        team.submitTeamApply(param, (res) => {
         wx.hideLoading();

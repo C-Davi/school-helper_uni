@@ -31,6 +31,14 @@
         <view class='fo-28 bold'>联系方式:</view>
           <input class='text-right fo-28' type='number' value=''    name='stu_phone' placeholder='请输入手机号'></input>
         </view>
+        <view class='pa-t30 pa-b10'>
+        <view class='fo-28 bold'>个人简介:</view>
+        <textarea class="job_desc" value="" bindblur="bindTextAreaBlur" maxlength="1024" placeholder="请填写个人简介"></textarea>
+      </view>
+       <view class='pa-t30 pa-b10'>
+        <view class='fo-28 bold'>社团期望:</view>
+        <textarea class="job_desc" value="" bindblur="bindTeamAreaBlur" maxlength="1024" placeholder="请填写对社团的期望"></textarea>
+      </view>
       <view class='pa-t30 pa-b10'>
         <view class='fo-28 bold'>免冠照片:</view>
         <view class='tuu panel-center item-center fo-g fo-50' style="background-image:url({{tmp_stu_card}})" data-name='stu_card' bindtap='choose'> + </view>
