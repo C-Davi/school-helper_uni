@@ -54,7 +54,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 8,
 			"list": [
 				{
 					"id": 0,
@@ -109,7 +109,14 @@
 					"id": 7,
 					"name": "社团组织报名",
 					"pathName": "pages/leisure/enroll/enroll",
-					"query": "team_id=5",
+					"query": "team_id=6",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "社联组织",
+					"pathName": "pages/union/home/home",
+					"query": "",
 					"scene": null
 				}
 			]

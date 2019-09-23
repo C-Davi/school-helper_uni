@@ -1,23 +1,25 @@
 import { Base } from '../../utils/base.js';
-class Let extends Base {
+class Union extends Base {
   constructor() {
     super();
   }
-  getTeamsByType(data,callback){
+  //获取全部社联组织
+  getAllUnions(data, callback) {
     var params = {
-      url:'teams',
-      data:{type:data},
-      type:'get',
+      url: 'unions',
+      data: { type: data },
+      type: 'get',
       sCallback: function (data) {
         callback && callback(data);
       }
     };
     this.request(params);
   }
-  getTeamById(id,callback){
+  //获取社联某个组织
+  getUnionById(id, callback) {
     var params = {
-      url: 'teams/find',
-      data: { team_id: id },
+      url: 'unions/find',
+      data: { union_id: id },
       type: 'get',
       sCallback: function (data) {
         callback && callback(data);
@@ -37,22 +39,10 @@ class Let extends Base {
     };
     this.request(allParams);
   }
-  // 提交学生信息
-  submitStuInfo(data, callback) {
+  //提交社联组织申请
+  submitTeamApply(data, callback) {
     var allParams = {
-      url: 'user/upStuInfo',
-      data: data,
-      type: 'post',
-      sCallback: function (data) {
-        callback && callback(data);
-      }
-    };
-    this.request(allParams);
-  }
-  //提交社团申请
-  submitTeamApply(data,callback){
-    var allParams = {
-      url: 'teams/upStuInfo',
+      url: 'unions/upStuInfo',
       data: data,
       type: 'post',
       sCallback: function (data) {
@@ -62,10 +52,10 @@ class Let extends Base {
     this.request(allParams);
   }
   //查询纳新进度
-  checkTeamSchedule(teamId,callback){
+  checkTeamSchedule(teamId, callback) {
     var allParams = {
-      url: 'teams/check',
-      data: { teamId: teamId },
+      url: 'unions/schedule',
+      data: { unionId: teamId },
       type: 'get',
       sCallback: function (data) {
         callback && callback(data);
@@ -73,10 +63,10 @@ class Let extends Base {
     };
     this.request(allParams);
   }
-  //社团是否纳新
-  teamCanApply(callback){
+  //社联组织是否纳新
+  unionCanApply(callback) {
     var allParams = {
-      url: 'system/canTeamApply',
+      url: 'unions/check',
       data: { token: 'wxshelian' },
       type: 'get',
       sCallback: function (data) {
@@ -86,4 +76,4 @@ class Let extends Base {
     this.request(allParams);
   }
 }
-export { Let };
+export { Union };

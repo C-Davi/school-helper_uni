@@ -66,6 +66,10 @@
 </swiper>
 <view class="title">学在青职</view>
 <view class="main">
+    <view bindtap="goUnionPage" class="main-list" hoverClass="main-list--hover">
+        <image class="main-list__icon" src="/images/icon/canteen.svg"></image>
+        <text class="main-list__name">海尔社联</text>
+    </view>
     <view bindtap="goScorePage" class="main-list" hoverClass="main-list--hover">
         <image class="main-list__icon" src="/images/icon/asso.svg"></image>
         <text class="main-list__name">社团组织</text>

@@ -15,6 +15,17 @@ class My extends Base {
     };
     this.request(allParams);
   }
+  getStudentInfo(callback){
+    var allParams = {
+      url: 'user/getStuInfo',
+      data: { token: 'wxshelian' },
+      type: 'get',
+      sCallback: function (data) {
+        callback && callback(data);
+      }
+    };
+    this.request(allParams);
+  }
   getStuTeams(callback){
     var allParams = {
       url: 'user/getStuTeams',

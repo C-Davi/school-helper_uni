@@ -12,11 +12,27 @@
       </view>
     </view>
     <view class="common-d bottom">
-      <view class="b-title">
-        <view class="team-type">身心类社团</view>   
-        <view class="team-type">技能类社团</view>
+      <view class="b-content" wx:if="{{md_status==1}}">
+        <view class="team-img">
+          <image class="team_img" src="{{img_pre}}{{mdInfo.md_team.logo}}"></image>
+        </view>
+        <view class="team-text">
+            <view class="team-t">社团名称：{{mdInfo.md_team.team_name}}</view>
+            <view class="team-t">社团类型：身心类社团</view>
+            <view class="team-t">社团学分：{{enPoints}}</view>
+        </view>
       </view>
-      <view class="b-content"></view>
-      <view class="b-content-empty"></view>
+
+      <view class="b-content" wx:if="{{eng_status==1}}">
+        <view class="team-img">
+          <image class="team_img" src="{{img_pre}}{{enInfo.md_team.logo}}"></image>
+        </view>
+        <view class="team-text">
+            <view class="team-t">社团名称：{{enInfo.md_team.team_name}}</view>
+            <view class="team-t">社团类型：技能类社团</view>
+            <view class="team-t">社团学分：{{enPoints}}</view>
+        </view>
+      </view>
+      <view class="b-content-empty" wx:if="{{md_status==2 && en_status==2||status==2}}">暂无相关社团信息</view>
     </view>
 </view>

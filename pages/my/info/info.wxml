@@ -53,6 +53,11 @@
         </picker>
       </view>
 
+      <view class='panel-between border-b pa-t30 pa-b10'>
+        <view class='fo-28 bold'>联系方式(必填):</view>
+        <input class='text-right fo-28' type='number' value='{{stu_num}}' name='stu_phone' placeholder='输入手机号'></input>
+      </view>
+
       <view class='pa-t30 pa-b10'>
         <view class='fo-28 bold'>学生证正面(必填):</view>
         <view class='tuu panel-center item-center fo-g fo-50' style="background-image:url({{tmp_stu_card}})" data-name='stu_card' bindtap='choose'> + </view>

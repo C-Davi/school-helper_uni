@@ -33,6 +33,11 @@ Page({
         //     });
         // });
     },
+    goUnionPage:function(){
+      wx.navigateTo({
+        url: "../../union/home/home"
+      });
+    },
     goScorePage: function() {
         wx.navigateTo({
             url: "../../leisure/home/home"

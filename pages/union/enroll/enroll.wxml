@@ -13,11 +13,7 @@
       </view>
       <view class='panel-between border-b pa-t30 pa-b10'>
         <view class='fo-28 bold'>报名部门:</view>
-        <picker class='text-right fo-28' bindchange="groupChange" value="{{groupArr[groupIndex].key}}" range="{{group}}">
-            <view>
-              <text>{{groupArr[groupIndex].value}}</text>
-            </view>
-        </picker>
+        <input class='text-right fo-28'  value='{{branch_name}}'  disabled="disabled"  name='branch_name' placeholder='请输入学号'></input>
       </view>
       <view class='panel-between border-b pa-t30 pa-b10'>
         <view class='fo-28 bold'>接受调剂:</view>
@@ -31,17 +27,26 @@
         <view class='fo-28 bold'>联系方式:</view>
           <input class='text-right fo-28' type='number' value=''    name='stu_phone' placeholder='请输入手机号'></input>
         </view>
-        <view class='pa-t30 pa-b10'>
-        <view class='fo-28 bold'>个人简介:</view>
-        <textarea class="job_desc" value="" bindblur="bindTextAreaBlur" maxlength="1024" placeholder="请填写个人简介"></textarea>
-      </view>
-       <view class='pa-t30 pa-b10'>
-        <view class='fo-28 bold'>社团期望:</view>
-        <textarea class="job_desc" value="" bindblur="bindTeamAreaBlur" maxlength="1024" placeholder="请填写对社团的期望"></textarea>
-      </view>
+        <view class='panel-between border-b pa-t30 pa-b10'>
+        <view class='fo-28 bold'>政治面貌:</view>
+          <input class='text-right fo-28' type='text' value=''    name='stu_face' placeholder='填写党员、团员、群众'></input>
+        </view>
+        <view class='panel-between border-b pa-t30 pa-b10'>
+        <view class='fo-28 bold'>曾任职务:</view>
+          <input class='text-right fo-28' type='text' value=''    name='old_job' placeholder='填写曾任职务'></input>
+        </view>
+        <view class='panel-between border-b pa-t30 pa-b10'>
+        <view class='fo-28 bold'>现任职务:</view>
+          <input class='text-right fo-28' type='text' value=''    name='new_job' placeholder='填写现任职务'></input>
+        </view>
+
       <view class='pa-t30 pa-b10'>
         <view class='fo-28 bold'>免冠照片:</view>
         <view class='tuu panel-center item-center fo-g fo-50' style="background-image:url({{tmp_stu_card}})" data-name='stu_card' bindtap='choose'> + </view>
+      </view>
+      <view class='pa-t30 pa-b10'>
+        <view class='fo-28 bold'>个人简介及工作计划:</view>
+        <textarea class="job_desc" value="" bindblur="bindTextAreaBlur" maxlength="1024"></textarea>
       </view>
       <button class='btns ' form-type="submit">确认提交</button>
     </form>

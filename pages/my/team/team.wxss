@@ -9,7 +9,6 @@
 .common-d{
   display: flex;
   width: 97vw;
-  border: 1rpx solid rebeccapurple; 
 }
 .top{
   display: flex;
@@ -24,6 +23,41 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.b-content{
+  width: 97vw;
+  height: 23vh;
+  border: 4rpx solid white;
+  background-color:#adadad;
+  display: flex;
+  flex-direction: row;
+}
+.team_img{
+  width: 25vw;
+  height: 25vw;
+}
+.team-img{
+  width: 25vw;
+  height: 25vw;
+  margin-left: 5vw;
+  margin-top: 5vw;
+}
+.team-text{
+  width: 60vw;
+  height: 30vw;
+  margin-top: 5vw;
+  margin-left: 5vw;
+  display: flex;
+  flex-direction: column;
+  padding: 0 auto;
+}
+.b-content-empty{
+  padding-top: 40rpx;
+  width: 94vw;
+  height: 45vh;
+  border: 4rpx solid white;
+  background-color:#adadad;
+  text-align: center;
 }
 .avatar{
   width: 150rpx;
@@ -59,5 +93,6 @@
   background-color:#adadad;
   padding: 5rpx; 
   border-radius: 13rpx;
-  font-size: 40rpx;
+  font-size: 34rpx;
+  font-weight: bold;
 }

@@ -2,17 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="888de6ff-ed3f-48f1-8e87-698bca36b822" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/union/enroll/enroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/union/enroll/enroll.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/union/enroll/enroll.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/union/enroll/enroll.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/union/home/home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/union/home/home.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/union/home/home.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/union/home/home.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/union/union-model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/about/home/home.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about/home/home.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index/home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/home/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index/home/home.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/home/home.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/home/home.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/home/home.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/info/info.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/info/info.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/info/info.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/info/info.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/weather/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/weather/main.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/weather/main.wxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/weather/main.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/leisure/enroll/enroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/leisure/enroll/enroll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/leisure/enroll/enroll.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/leisure/enroll/enroll.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/leisure/enroll/enroll.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/leisure/enroll/enroll.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/leisure/home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/leisure/home/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/leisure/let-model.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/leisure/let-model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/my-model.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my-model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,6 +56,7 @@
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -88,7 +96,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -99,29 +106,13 @@
             <path>
               <item name="school-helper" type="b2602c69:ProjectViewProjectNode" />
               <item name="school-helper" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="school-helper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="school-helper" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="icon" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="school-helper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="school-helper" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="school-helper" type="b2602c69:ProjectViewProjectNode" />
-              <item name="school-helper" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -208,16 +199,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8126000" />
+    <option name="totallyTimeSpent" value="8342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20735608" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.216" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="SmartIM" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -227,15 +216,16 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="12" />
-      <window_info anchor="right" id="Api Debugger" />
+      <window_info anchor="bottom" id="SmartIM" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Api Debugger" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">

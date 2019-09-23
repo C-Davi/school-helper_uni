@@ -17,7 +17,7 @@ Page({
         // wx.request({
         //     url: "https://www.zzuyinluo.top/schedules/schoolNews",
         //     success: function(e) {
-        //         t.setData({
+        //         t.setData({  
         //             news: e.data
         //         });
         //     }

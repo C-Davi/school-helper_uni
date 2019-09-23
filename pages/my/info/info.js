@@ -218,7 +218,12 @@ Page({
         title: '请输入学生证号',
         icon: 'none'
       })
-    } else if (this.data.stu_card == '' || this.data.stu_card.indexOf('tmp') > 0) {
+    } else if (e.detail.value.stu_phone =='') {
+      wx.showToast({
+        title: '请输入手机号',
+        icon: 'none'
+      })
+    }else if (this.data.stu_card == '' || this.data.stu_card.indexOf('tmp') > 0) {
       wx.showToast({
         title: '请上传学生证',
         icon: 'none'
@@ -247,6 +252,7 @@ Page({
         name: e.detail.value.name,
         stu_num: e.detail.value.stu_num,
         stu_card: this.data.stu_card,
+        stu_phone: e.detail.value.stu_phone,
         sex:this.data.sex,
         collegeId:this.data.collegeId,
         majorId:this.data.majorId,
