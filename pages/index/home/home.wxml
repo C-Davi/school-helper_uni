@@ -74,10 +74,10 @@
         <image class="main-list__icon" src="/images/icon/asso.svg"></image>
         <text class="main-list__name">社团组织</text>
     </view>
-     <!-- <view class="main-list" hoverClass="main-list--hover">
+    <view class="main-list" hoverClass="main-list--hover">
         <text class="main-list__icon" data-name="R">32</text>
         <text class="main-list__name">空教室</text>
-    </view> -->
+    </view>
 </view>
 <view class="title">住在青职</view>
 <view class="main">
@@ -88,11 +88,11 @@
     <!-- <view bindtap="showBusTime" class="main-list" hoverClass="main-list--hover">
         <image class="main-list__icon" src="/images/icon/bus.svg"></image>
         <text class="main-list__name">校车车</text>
-    </view>
-    <view bindtap="showCalendar" class="main-list" hoverClass="main-list--hover">
+    </view> -->
+    <!-- <view bindtap="showCalendar" class="main-list" hoverClass="main-list--hover">
         <image class="main-list__icon" src="/images/icon/calendar.svg"></image>
         <text class="main-list__name">校历历</text>
-    </view> -->
+    </view>  -->
     <!-- <view bindtap="goAssoPage" class="main-list" hoverClass="main-list--hover">
         <image class="main-list__icon" src="/images/icon/asso.svg"></image>
         <text class="main-list__name">学校社团</text>

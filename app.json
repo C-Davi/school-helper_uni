@@ -15,7 +15,9 @@
     "pages/index/phone/phone",
     "pages/my/info/info",
     "pages/my/team/team",
-    "pages/my/bind/bind"
+    "pages/my/bind/bind",
+    "pages/information/index/index",
+    "pages/information/detail/index"
   ],
   "window": {
     "navigationBarTitleText": "掌上嗨尔社联",
