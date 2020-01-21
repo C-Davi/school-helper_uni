@@ -1,4 +1,5 @@
 // pages/information/detail/index.js
+var wxParse  = require('/utils/wxParse/wxParse.js');
 Page({
 
   /**
@@ -13,6 +14,10 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+
+  _onLoad:function (params) {
+    
   },
 
   /**
