@@ -25,7 +25,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.10.1",
 	"appid": "wx49ba939a016a70c9",
-	"projectname": "%E7%A4%BE%E8%81%94%E6%A0%A1%E5%9B%AD%E5%8A%A9%E6%89%8B",
+	"projectname": "school-helper",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

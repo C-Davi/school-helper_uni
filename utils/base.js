@@ -1,13 +1,12 @@
-
-import { Config } from 'config.js';
-import { Token } from 'token.js';
+import { Config } from "./config";
+import { Token } from "./token";
 
 class Base {
   constructor() {
     this.baseRequestUrl = Config.restUrl;
-  }
+  } // 当noRefech为true时，不做未授权重试机制
 
- // 当noRefech为true时，不做未授权重试机制
+
   request(params, noRefetch) {
     var that = this;
     var url = this.baseRequestUrl + params.url;
@@ -30,8 +29,7 @@ class Base {
 
         if (startChar == '2') {
           params.sCallback && params.sCallback(res.data);
-        }
-        else {
+        } else {
           //AOP
           if (code == '401') {
             // token.getTokenFromServer
@@ -40,7 +38,8 @@ class Base {
               that._refetch(params);
             }
           }
-          if(noRefetch){
+
+          if (noRefetch) {
             params.eCallback && params.eCallback(res.data);
           }
         }
@@ -48,20 +47,21 @@ class Base {
       fail: function (err) {
         console.log(err);
       }
-    })
+    });
   }
 
   _refetch(params) {
     var token = new Token();
-    token.getTokenFromServer((token) => {
+    token.getTokenFromServer(token => {
       this.request(params, true);
     });
   }
-
   /*获得元素上的绑定的值*/
+
+
   getDataSet(event, key) {
     return event.currentTarget.dataset[key];
-  };
+  }
 
 }
 

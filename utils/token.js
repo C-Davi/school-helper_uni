@@ -1,22 +1,22 @@
-import { Config } from 'config.js';
+import { Config } from "./config";
 
 class Token {
-  constructor(){
+  constructor() {
     this.verifyUrl = Config.restUrl + 'token/verify';
     this.tokenUrl = Config.restUrl + 'token/user';
   }
 
   verify() {
     var token = wx.getStorageSync('token');
+
     if (!token) {
       this.getTokenFromServer();
-    }
-    else {
+    } else {
       this._veirfyFromServer(token);
-    } 
-  }
+    }
+  } // 携带令牌去服务器校验令牌
 
- // 携带令牌去服务器校验令牌
+
   _veirfyFromServer(token) {
     var that = this;
     wx.request({
@@ -27,14 +27,15 @@ class Token {
       },
       success: function (res) {
         var valid = res.data.isValid;
+
         if (!valid) {
           that.getTokenFromServer();
         }
       }
-    })
-  }
+    });
+  } //从服务器获取token
 
-  //从服务器获取token
+
   getTokenFromServer(callBack) {
     var that = this;
     wx.login({
@@ -49,10 +50,11 @@ class Token {
             wx.setStorageSync('token', res.data.token);
             callBack && callBack(res.data.token);
           }
-        })
+        });
       }
-    })
+    });
   }
+
 }
 
-export {Token};
+export { Token };

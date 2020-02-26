@@ -1,0 +1,127 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index/index",
+			"style": {
+				"component": true
+			}
+		},
+		{
+			"path": "pages/index/home/home",
+			"style": {}
+		},
+		{
+			"path": "pages/leisure/home/home",
+			"style": {
+				"navigationBarTitleText": "社团组织"
+			}
+		},
+		{
+			"path": "pages/leisure/enroll/enroll",
+			"style": {
+				"navigationBarTitleText": "社团组织报名"
+			}
+		},
+		{
+			"path": "pages/union/home/home",
+			"style": {
+				"navigationBarTitleText": "社联组织"
+			}
+		},
+		{
+			"path": "pages/union/enroll/enroll",
+			"style": {
+				"navigationBarTitleText": "社联组织报名"
+			}
+		},
+		{
+			"path": "pages/about/home/home",
+			"style": {}
+		},
+		{
+			"path": "pages/article/index",
+			"style": {
+				"navigationBarTitleText": "鸡汤说",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/index/map/map",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "#ffe411"
+			}
+		},
+		{
+			"path": "pages/index/asso/asso",
+			"style": {}
+		},
+		{
+			"path": "pages/index/asso/index/index",
+			"style": {}
+		},
+		{
+			"path": "pages/index/map/index/index",
+			"style": {}
+		},
+		{
+			"path": "pages/index/phone/phone",
+			"style": {}
+		},
+		{
+			"path": "pages/my/info/info",
+			"style": {
+				"navigationBarTitleText": "学生信息"
+			}
+		},
+		{
+			"path": "pages/my/team/team",
+			"style": {}
+		},
+		{
+			"path": "pages/my/bind/bind",
+			"style": {
+				"navigationBarTitleText": "学生信息绑定"
+			}
+		},
+		{
+			"path": "pages/information/index/index",
+			"style": {}
+		},
+		{
+			"path": "pages/information/detail/index",
+			"style": {}
+		}
+	],
+	"tabBar": {
+		"color": "#000",
+		"selectedColor": "#2dc799",
+		"list": [
+			{
+				"pagePath": "pages/index/home/home",
+				"text": "首页",
+				"iconPath": "static/images/tabbar/1.png",
+				"selectedIconPath": "static/images/tabbar/11.png"
+			},
+			{
+				"pagePath": "pages/article/index",
+				"text": "鸡汤说",
+				"iconPath": "static/images/tabbar/2.png",
+				"selectedIconPath": "static/images/tabbar/22.png"
+			},
+			{
+				"pagePath": "pages/about/home/home",
+				"text": "我的",
+				"iconPath": "static/images/tabbar/3.png",
+				"selectedIconPath": "static/images/tabbar/33.png"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTitleText": "掌上嗨尔社联",
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#2dc799"
+	},
+	"subPackages": []
+}

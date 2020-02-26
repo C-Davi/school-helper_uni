@@ -1,9 +1,0 @@
-<view class="header">{{newsDetail.newsName}}</view>
-<view class="time">{{newsDetail.newsTime}}</view>
-<view class="content">
-    <text wx:for="{{newsDetail.news}}">{{item}}</text>
-</view>
-<view class="image" wx:for="{{newsDetail.imgMap}}">
-    <image bindtap="preview" data-index="index" mode="aspectFill" src="{{item.imgUrl}}"></image>
-    <text>{{item.title}}</text>
-</view>

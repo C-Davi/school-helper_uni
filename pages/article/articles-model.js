@@ -1,10 +1,11 @@
-import { Base } from '../../utils/base.js';
-class Articles extends Base{
-  constructor(){
+import { Base } from "../../utils/base";
+
+class Articles extends Base {
+  constructor() {
     super();
   }
 
-  getGoodArticle(data,callback){
+  getGoodArticle(data, callback) {
     var params = {
       url: 'article',
       type: 'post',
@@ -13,10 +14,10 @@ class Articles extends Base{
         callback && callback(data);
       }
     };
-    this.request(params); 
+    this.request(params);
   }
 
-  changeLiked(data, callback){
+  changeLiked(data, callback) {
     var params = {
       url: 'article/change',
       type: 'post',
@@ -27,10 +28,13 @@ class Articles extends Base{
     };
     this.request(params);
   }
-  getShareImg(callback){
+
+  getShareImg(callback) {
     var allParams = {
       url: 'system/share',
-      data: { token: 'wxshelian' },
+      data: {
+        token: 'wxshelian'
+      },
       type: 'get',
       sCallback: function (data) {
         callback && callback(data);
@@ -38,10 +42,14 @@ class Articles extends Base{
     };
     this.request(allParams);
   }
-  makeShare(data,callback){
+
+  makeShare(data, callback) {
     var allParams = {
       url: 'system/getShareCanv',
-      data: { token: 'wxshelian',id:data },
+      data: {
+        token: 'wxshelian',
+        id: data
+      },
       type: 'get',
       sCallback: function (data) {
         callback && callback(data);
@@ -49,5 +57,7 @@ class Articles extends Base{
     };
     this.request(allParams);
   }
+
 }
+
 export { Articles };

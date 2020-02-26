@@ -1,8 +1,6 @@
-
 class Config {
-  constructor() {
-    
-  }
+  constructor() {}
+
 }
 
 Config.restUrl = 'https://shelian.qtc369.com/api/v1/';

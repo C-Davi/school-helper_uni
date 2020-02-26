@@ -1,4 +1,0 @@
-<!--pages/information/detail/index.wxml-->
-<view style="margin:0 8rpx">
-    <template is="wxParse" data="{{ wxParseData:articles.nodes}}" />
-</view>

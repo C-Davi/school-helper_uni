@@ -1,4 +1,5 @@
-import { Base } from '../../utils/base.js';
+import { Base } from "../../utils/base";
+
 class About extends Base {
   constructor() {
     super();
@@ -7,7 +8,9 @@ class About extends Base {
   getLogo(callback) {
     var allParams = {
       url: 'system/logo',
-      data: { token: 'wxshelian' },
+      data: {
+        token: 'wxshelian'
+      },
       type: 'get',
       sCallback: function (data) {
         callback && callback(data);
@@ -15,5 +18,7 @@ class About extends Base {
     };
     this.request(allParams);
   }
+
 }
+
 export { About };

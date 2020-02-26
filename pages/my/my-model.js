@@ -1,13 +1,17 @@
-import { Base } from '../../utils/base.js';
+import { Base } from "../../utils/base";
+
 class My extends Base {
   constructor() {
     super();
-  }
-  // 判断是否绑定学生信息
+  } // 判断是否绑定学生信息
+
+
   checkBindSid(callback) {
     var allParams = {
       url: 'user/checkBindSid',
-      data: { token: 'wxshelian' },
+      data: {
+        token: 'wxshelian'
+      },
       type: 'get',
       sCallback: function (data) {
         callback && callback(data);
@@ -15,10 +19,13 @@ class My extends Base {
     };
     this.request(allParams);
   }
-  getStudentInfo(callback){
+
+  getStudentInfo(callback) {
     var allParams = {
       url: 'user/getStuInfo',
-      data: { token: 'wxshelian' },
+      data: {
+        token: 'wxshelian'
+      },
       type: 'get',
       sCallback: function (data) {
         callback && callback(data);
@@ -26,58 +33,73 @@ class My extends Base {
     };
     this.request(allParams);
   }
-  getStuTeams(callback){
+
+  getStuTeams(callback) {
     var allParams = {
       url: 'user/getStuTeams',
-      data: { token: 'wxshelian' },
+      data: {
+        token: 'wxshelian'
+      },
       type: 'get',
       sCallback: function (data) {
         callback && callback(data);
       }
     };
     this.request(allParams);
-  }
-  // 提交学生信息
-  submitStuInfo(data,callback){
-    var  allParams = {
-      url:'user/upStuInfo',
-      data:data,
-      type:'post',
-      sCallback: function (data) {
-        callback && callback(data);
-      }
-    };
-    this.request(allParams);
-  }
-  //获取全部院系
-  getColleges(type,callback){
+  } // 提交学生信息
+
+
+  submitStuInfo(data, callback) {
     var allParams = {
-      url: 'user/getGroupByType',
-      data: { type: type},
+      url: 'user/upStuInfo',
+      data: data,
       type: 'post',
       sCallback: function (data) {
         callback && callback(data);
       }
     };
     this.request(allParams);
-  }
-  //获取全部专业
+  } //获取全部院系
+
+
+  getColleges(type, callback) {
+    var allParams = {
+      url: 'user/getGroupByType',
+      data: {
+        type: type
+      },
+      type: 'post',
+      sCallback: function (data) {
+        callback && callback(data);
+      }
+    };
+    this.request(allParams);
+  } //获取全部专业
+
+
   getMajor(id, callback) {
     var allParams = {
       url: 'user/getGroupByType',
-      data: { id: id, type: 2 },
+      data: {
+        id: id,
+        type: 2
+      },
       type: 'post',
       sCallback: function (data) {
         callback && callback(data);
       }
     };
     this.request(allParams);
-  }
-  //获取全部班级
+  } //获取全部班级
+
+
   getClass(id, callback) {
     var allParams = {
       url: 'user/getGroupByType',
-      data: { id: id ,type:3},
+      data: {
+        id: id,
+        type: 3
+      },
       type: 'post',
       sCallback: function (data) {
         callback && callback(data);
@@ -85,5 +107,7 @@ class My extends Base {
     };
     this.request(allParams);
   }
+
 }
+
 export { My };

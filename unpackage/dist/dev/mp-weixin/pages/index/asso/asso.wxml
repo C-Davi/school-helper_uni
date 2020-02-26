@@ -1,0 +1,1 @@
+<view class="asso"><block wx:for="{{asso}}" wx:for-item="item" wx:for-index="index" wx:key="index"><navigator class="asso-list" url="{{'index/index?id='+item.id}}"><image class="asso-list__logo" src="{{item.logo}}"></image><text class="asso-list__name">{{item.name}}</text></navigator></block></view>
